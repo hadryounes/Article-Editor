@@ -1,16 +1,282 @@
 // Import partials
 @import
-  "fonts"
+  "fonts",
+  "color-palette",
+  "custom"
 ;
 
 // Variables
-
-
-
-
+$border-color: #d9dee3;
+$Interface: 'Interface',  "Helvetica Neue", Arial, sans-serif;
+$Open-Sans: 'Open Sans',  "Helvetica Neue", Arial, sans-serif;
 
 
 // Custom
+
+h1 {
+    font-family: $Open-Sans;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+h2 {
+    font-family: $Open-Sans;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+h4 {
+    font-family: $Interface;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+// Buttons
+
+.btn {
+    border-radius: 50px;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-family: $Open-Sans;
+    letter-spacing: -0.1px;
+
+    i.ionicons {
+        font-size: 1.375rem;
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+    i.fa {
+        font-size: 0.875rem;
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+    span {
+        vertical-align: middle
+    }
+}
+
+.btn-green {
+    background: white;
+    border: 1px solid $green;
+    color: $green;
+
+}
+
+.btn-green-full {
+    background: $green;
+    letter-spacing: -0.1px;
+    color: white;
+}
+
+.btn-grey {
+    @extend .btn-green;
+    border-color: $grey-5;
+    color: $grey-5;
+}
+
+.btn-grey-full {
+    @extend .btn-green-full;
+    background: $grey-5;
+}
+
+// Links
+
+a {
+    color: $dark-blue-4;
+    text-decoration: underline;
+    &:hover {
+        color: $bright-blue;
+        text-decoration: underline;
+    }
+    &:active {
+        color: $bright-blue;
+        text-decoration: none;
+    }
+}
+
+a.a-highlight {
+    color: #5D636B;
+    background-color: #C3DCFB;
+    padding: 2px 1px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $bright-blue;
+        color: white;
+    }
+}
+
+//Content
+.content-text {
+    font-family: $Open-Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #dark-blue-4;
+
+}
+
+.ui-text {
+    font-family: $Interface;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $dark-blue-4;
+}
+
+// Dropdowns
+
+.dropdown-btn {
+    width: 262px;
+	height: 36px;
+	border-radius: 2px;
+	background-color: white;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+	border: solid 1px #ccd2d6;
+
+    color: $grey-1;
+    text-align: left;
+    letter-spacing: -0.1px;
+    vertical-align:  middle;
+    padding: 0 13px;
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    &:active, &:focus {
+        border: 1px solid $grey-6;
+        //box-shadow: 0;
+        outline:0;
+    }
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: right;
+    margin-left: .875em;
+    margin-top: 7px;
+    vertical-align: .255em;
+    content: "";
+    color: #aab3ba;
+    border-top: .35em solid;
+    border-right: .35em solid transparent;
+    border-left: .35em solid transparent;
+}
+
+.dropdown-menu {
+    width: 262px;
+    margin-top: 8px;
+    border-top: 3px solid $bright-blue;
+    border-radius: 0;
+    padding: 0 15px;
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 100%;
+        right: 10px;
+        border-width: 0 8px 8px 8px;
+        border-style: solid;
+        border-color: $bright-blue transparent;
+    }
+    .dropdown-item {
+        padding: 10px 0px;
+        border-bottom: 1px solid $grey-7;
+        @extend .ui-text;
+        text-decoration: none;
+        color: $grey-3;
+
+        i{
+            margin-right: 5px;
+        }
+        &:hover, &:focus {
+            background: transparent;
+            color: $dark-blue-4;
+        }
+    }
+    .tab-pane a i {
+        margin-right: 5px;
+    }
+    .nav-tabs {
+        border-bottom: 1px solid $grey-7;
+        padding-bottom: 1px;
+        .nav-item {
+            width: 50%;
+            text-align: center;
+        }
+        .nav-link {
+            font-size: 0.875rem;
+            text-decoration: none;
+            border-bottom: 0;
+            border:0;
+            color: $grey-3;
+            &:hover {
+                border: 0;
+                color: $dark-blue-4;
+            }
+            &.active {
+                color:  $dark-blue-4;
+                border: none;
+                font-family: $Open-Sans;
+                font-weight: 600;
+                border-bottom:  2px solid #A6B2CC;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// Style
+
+body {
+    font-size: 16px; //1rem
+    font-family: $Interface;
+    color: $dark-blue-4;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+#main-content {
+    display: flex;
+    width: calc(100% - 90px);
+    margin-left: 90px;
+    min-height: 100vh;
+    min-width: 600px;
+    transition: all .2s;
+    overflow: auto;
+}
+
+#sidebar {
+    position: fixed;
+    top: -1px;
+    right: 0px;
+    width: 280px;
+    height: 100%;
+    //opacity: 0;
+    transition: all .2s;
+    background: white;
+    border-left: 1px solid $border-color;
+    z-index: 999;
+}
+
+#editor-content {
+    position: relative;
+    width: calc(100% - 310px)
+}
 
 .navbar {
     position: fixed;
@@ -25,7 +291,52 @@
     background-color: #29384b;
 }
 
-#main-content {
-    margin-left: 75px;
-    
+.head {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    padding-top: 18px;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.last-update {
+    float: right;
+    display: inline-block;
+    font-size: 0.8125rem;
+    color: #9da6b0;
+    margin-top: 2px;
+    font-weight: 400;
+    font-family: $Open-Sans;
+}
+
+
+.breadcrumbs {
+    font-family: 'Interface';
+    font-size: 14px;
+    display: inline-block;
+    float: left;
+    color: #4f637d;
+    letter-spacing: 0.2px;
+    padding: 0;
+    list-style: none;
+
+    .bc-item {
+        float: left;
+        display: inline;
+        a {
+            color: #4f637d;
+            text-decoration: underline;
+        }
+    }
+
+    .bc-item+.bc-item::before {
+        display: inline-block;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        color: #4f637d;
+        content: ">";
+    }
+
 }

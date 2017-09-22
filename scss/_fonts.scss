@@ -1,0 +1,54 @@
+// Import Open Sans
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
+
+// Import Interface font
+@font-face {
+  font-family: 'Interface';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("../fonts/Interface-Regular.woff2?v=1.5") format("woff2"),
+       url("../fonts/Interface-Regular.woff?v=1.5") format("woff");
+}
+@font-face {
+  font-family: 'Interface';
+  font-style:  italic;
+  font-weight: 400;
+  src: url("../fonts/Interface-RegularItalic.woff2?v=1.5") format("woff2"),
+       url("../fonts/Interface-RegularItalic.woff?v=1.5") format("woff");
+}
+
+@font-face {
+  font-family: 'Interface';
+  font-style:  normal;
+  font-weight: 500;
+  src: url("../fonts/Interface-Medium.woff2?v=1.5") format("woff2"),
+       url("../fonts/Interface-Medium.woff?v=1.5") format("woff");
+}
+@font-face {
+  font-family: 'Interface';
+  font-style:  italic;
+  font-weight: 500;
+  src: url("../fonts/Interface-MediumItalic.woff2?v=1.5") format("woff2"),
+       url("../fonts/Interface-MediumItalic.woff?v=1.5") format("woff");
+}
+
+@font-face {
+  font-family: 'Interface';
+  font-style:  normal;
+  font-weight: 700;
+  src: url("../fonts/Interface-Bold.woff2?v=1.5") format("woff2"),
+       url("../fonts/Interface-Bold.woff?v=1.5") format("woff");
+}
+@font-face {
+  font-family: 'Interface';
+  font-style:  italic;
+  font-weight: 700;
+  src: url("../fonts/Interface-BoldItalic.woff2?v=1.5") format("woff2"),
+       url("../fonts/Interface-BoldItalic.woff?v=1.5") format("woff");
+}
+
+// Import Ionicons
+ @import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+
+// Import Fontawesme
+@import url("https://use.fontawesome.com/7b794425c9.css");

@@ -11,11 +11,88 @@
   </head>
   <body>
     <nav class="navbar">
-    
+
     </nav>
 
-    <div id="main-content" class="container-fluid">
-      aa
+    <div id="main-content" class="container-fluid no-padding">
+        <div id="sidebar">
+            <h1>Sidebar</h1>
+        </div>
+        <div id="editor-content">
+            <div class="head">
+                <ol class="breadcrumbs">
+                    <li class="bc-item"><a href="#">Content</a></li>
+                    <li class="bc-item active"><a href="#">Editor</a></li>
+                </ol><!--END .breadcrumbs-->
+                <div class="last-update">
+                    <span>Last Update: 30/08/2017</span>
+                </div><!--END .last-update-->
+            </div><!--END .head-->
+            <div class="styleguide-body">
+                <div class="row">
+
+                    <div class="col-xl-6">
+                        <br>
+                        <h1>Title H1</h1>
+                        <h2>Title H2</h2>
+                        <h4>Title H4</h4>
+                        <br>
+                        <p class="content-text">Content Text</p>
+                        <p class="ui-text">UI Text</p>
+                        <br>
+                        <a href="#" style="font-size: 1rem">Anchor</a><br>
+                        <a href="#" class="a-highlight" style="font-size: 1rem">highlighted</a>
+                        <br>
+                        <h6 style="margin-top: 40px;">Buttons</h6>
+                        <button type="button" class="btn btn-green-full"><i class="ionicons ion-ios-paperplane"></i><span>Publish<span></button>
+                        <button type="button" class="btn btn-green"><i class="ionicons ion-ios-paperplane"></i><span>Publish<span></button>
+                        <br><br>
+                        <button type="button" class="btn btn-grey-full"><i class="fa fa-floppy-o"></i><span>Save Draft<span></button>
+                        <button type="button" class="btn btn-grey"><i class="fa fa-floppy-o"></i><span>Save Draft<span></button>
+                        <br><br><br>
+                    </div><!-- END .row -->
+
+                    <div class="col-xl-6">
+                        <br>
+                        <h6>Dropdowns</h6>
+
+                        <div class="dropdown">
+                          <button class="dropdown-btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select a Category
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Profile</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <a class="dropdown-item" href="#"><i class="ion-android-checkbox-outline-blank"></i> Action tab 1</a>
+                                    <a class="dropdown-item" href="#"><i class="ion-android-checkbox-outline-blank"></i> Another action tab 1</a>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <a class="dropdown-item" href="#"> Action tab 2</a>
+                                    <a class="dropdown-item" href="#">Another action tab 2</a>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="ionicons ion-ios-browsers"></i> Version Control</a>
+                        </div><!-- END .dropdown-menu -->
+                      </div><!-- END .dropdown -->
+                  </div><!-- END .col-xl-6 -->
+              </div><!-- END .row -->
+
+
+
+
+
+
+
+            </div><!-- END .styleguide-body -->
+        </div><!--END #editor-content -->
     </div><!--END #main-content -->
 
 

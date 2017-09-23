@@ -199,6 +199,63 @@ a.a-highlight {
         font-weight: 600;
         border-bottom: 2px solid #A6B2CC; }
 
+.options-dropdown a {
+  float: right;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500; }
+  .options-dropdown a i {
+    margin-right: 2px;
+    font-size: 1rem;
+    vertical-align: -1px; }
+.options-dropdown .dropdown-menu {
+  width: 304px;
+  margin-top: 2px; }
+  .options-dropdown .dropdown-menu:before {
+    right: 23px; }
+  .options-dropdown .dropdown-menu .dropdown-title {
+    padding: 20px 0; }
+    .options-dropdown .dropdown-menu .dropdown-title h4 {
+      float: left;
+      color: #4f637d; }
+    .options-dropdown .dropdown-menu .dropdown-title a {
+      float: right;
+      color: #7b8693; }
+      .options-dropdown .dropdown-menu .dropdown-title a i {
+        vertical-align: 4px; }
+  .options-dropdown .dropdown-menu .dropdown-item {
+    color: #4f637d;
+    text-transform: none; }
+    .options-dropdown .dropdown-menu .dropdown-item:hover {
+      color: #364b62; }
+    .options-dropdown .dropdown-menu .dropdown-item .item-note {
+      font-size: 0.75rem;
+      opacity: .75;
+      font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 400;
+      padding-left: 10px; }
+  .options-dropdown .dropdown-menu .expandable::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: right;
+    margin-right: -5px;
+    margin-left: 0;
+    margin-top: 6px;
+    vertical-align: .255em;
+    content: "";
+    color: #7a8995;
+    border-top: .35em solid transparent;
+    border-bottom: .35em solid transparent;
+    border-right: .35em solid transparent;
+    border-left: .35em solid; }
+  .options-dropdown .dropdown-menu .red-item {
+    color: #E83535; }
+    .options-dropdown .dropdown-menu .red-item:hover, .options-dropdown .dropdown-menu .red-item:active, .options-dropdown .dropdown-menu .red-item:focus {
+      color: #E83535; }
+.options-dropdown .dropdown-toggle::after {
+  display: none; }
+
 body {
   font-size: 16px;
   font-family: "Interface", "Helvetica Neue", Arial, sans-serif;

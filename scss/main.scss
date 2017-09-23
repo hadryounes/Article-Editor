@@ -185,6 +185,7 @@ a.a-highlight {
         border-style: solid;
         border-color: $bright-blue transparent;
     }
+
     .dropdown-item {
         padding: 10px 0px;
         border-bottom: 1px solid $grey-7;
@@ -231,6 +232,86 @@ a.a-highlight {
     }
 }
 
+
+
+.options-dropdown {
+    a {
+        float: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        i {
+            margin-right: 2px;
+            font-size: 1rem;
+            vertical-align: -1px;
+        }
+
+    }
+    .dropdown-menu {
+        width: 304px;
+        margin-top: 2px;
+        &:before {
+            right: 23px;
+        }
+        .dropdown-title {
+            padding: 20px 0;
+            h4 {
+                float: left;
+                color: $dark-blue-4;
+            }
+            a {
+                float: right;
+                color: $grey-2;
+                i {
+                    vertical-align: 4px;
+                }
+            }
+        }
+        .dropdown-item {
+            color: $dark-blue-4;
+            text-transform: none;
+            &:hover {
+                color: $dark-blue-3;
+            }
+            .item-note {
+                font-size: 0.75rem;
+                //color: #c2c9ce;
+                opacity: .75;
+                font-family: $Open-Sans;
+                font-weight: 400;
+                padding-left: 10px;
+            }
+        }
+        .expandable {
+            &::after {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                float: right;
+                margin-right: -5px;
+                margin-left: 0;
+                margin-top: 6px;
+                vertical-align: .255em;
+                content: "";
+                color: $grey-1;
+                border-top: .35em solid transparent;
+                border-bottom: .35em solid transparent;
+                border-right: .35em solid transparent;
+                border-left: .35em solid;
+            }
+        }
+        .red-item {
+            color: $red;
+            &:hover, &:active, &:focus {
+                color: $red;
+            }
+        }
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
+}
 
 
 

@@ -1,5 +1,13 @@
+//-------------------------
+// Open Sans -----
+//-------------------------
+
 // Import Open Sans
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
+
+//-------------------------
+// Interface --------
+//-------------------------
 
 // Import Interface font
 @font-face {
@@ -46,6 +54,11 @@
   src: url("../fonts/Interface-BoldItalic.woff2?v=1.5") format("woff2"),
        url("../fonts/Interface-BoldItalic.woff?v=1.5") format("woff");
 }
+
+
+//-------------------------
+// Font icons ------
+//-------------------------
 
 // Import Ionicons
  @import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");

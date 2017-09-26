@@ -30,7 +30,7 @@
             <div class="styleguide-body">
                 <div class="row">
 
-                    <div class="col-xl-6">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
                         <br>
                         <h1>Title H1</h1>
                         <h2>Title H2</h2>
@@ -43,18 +43,26 @@
                         <a href="#" class="a-highlight" style="font-size: 1rem">highlighted</a>
                         <br>
                         <h6 style="margin-top: 40px;">Buttons</h6>
-                        <button type="button" class="btn btn-green-full"><i class="ionicons ion-ios-paperplane"></i><span>Publish<span></button>
-                        <button type="button" class="btn btn-green"><i class="ionicons ion-ios-paperplane"></i><span>Publish<span></button>
+                        <button type="button" class="btn-lg btn-green-full"><i class="ionicons ion-ios-paperplane"></i><span>Publish<span></button>
+                        <button type="button" class="btn-lg btn-green"><i class="ionicons ion-ios-paperplane"></i><span>Publish<span></button>
                         <br><br>
-                        <button type="button" class="btn btn-grey-full"><i class="fa fa-floppy-o"></i><span>Save Draft<span></button>
-                        <button type="button" class="btn btn-grey"><i class="fa fa-floppy-o"></i><span>Save Draft<span></button>
-                        <br><br><br>
-                    </div><!-- END .row -->
+                        <button type="button" class="btn-lg btn-grey-full"><i class="fa fa-floppy-o"></i><span>Save Draft<span></button>
+                        <button type="button" class="btn-lg btn-grey"><i class="fa fa-floppy-o"></i><span>Save Draft<span></button>
+                        <br><br>
+                        <button type="button" class="btn-md btn-grey-full"><i class="fa fa-plus"></i><span>Major Version<span></button>
+                        <button type="button" class="btn-md btn-grey"><i class="fa fa-plus"></i><span>Minor Version<span></button>
+                        <br><br>
+                        <button type="button" class="btn-circular btn-circular-grey-full"><i class="ionicons ion-ios-paperplane"></i></button>
+                        <button type="button" class="btn-circular btn-circular-grey"><i class="ionicons ion-ios-paperplane"></i></button>
+                        <br><br>
+                        <button type="button" class="btn-square btn-square-blue-full"><i class="ionicons ion-plus"></i></button>
+                        <br><br>
+                        <p><input type="checkbox" name="check-1" value="1" class="lcs_check" autocomplete="on" /></p>
+                    </div><!-- END .col-xl-6-->
 
                     <div class="col-xl-6">
                         <br>
                         <h6>Dropdown</h6>
-
                         <div class="dropdown">
                           <button class="dropdown-btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Select a Category
@@ -88,7 +96,7 @@
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <h4><i class="ionicons ion-ios-gear"></i> <span>options</span></h4>
                          </a>
-                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                         <div class="dropdown-menu dropdown-menu-right" style="padding-bottom:0;" aria-labelledby="dropdownMenuLink">
                           <a class="dropdown-item expandable" href="#"><i class="ionicons ion-ios-browsers"></i> Version Control</a>
                           <a class="dropdown-item expandable" href="#"><i class="ionicons ion-android-refresh"></i> Revision History</a>
                           <a class="dropdown-item expandable" href="#"><i class="ionicons ion-pricetag"></i> Custom Fields</a>
@@ -101,21 +109,37 @@
 
                     <br><br>
 
-                    <div class="dropdown options-dropdown">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <h4><i class="ionicons ion-ios-gear"></i> <span>Custom Fields</span></h4>
-                       </a>
-                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink-2">
-                           <div class="dropdown-title">
-                               <h4>Custom Fields</h4>
-                               <a href="#"><i class="ionicons ion-information-circled"></i></a>
-                           </div>
-                        <a class="dropdown-item red-item" href="#"><i class="ionicons ion-ios-trash"></i> Delete & Redirect <span class="item-note">(Cannot be Undone)</span></a>
+                <div class="dropdown options-dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <h4><i class="ionicons ion-ios-gear"></i> <span>Custom Fields</span></h4>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink-2">
+                        <div class="dropdown-title">
+                                <h4>Custom Fields</h4>
+                                <a href="#"><i class="ionicons ion-information-circled"></i></a>
+                        </div>
+                        <form>
+                            <div class="form-group dropdown-form">
+                                <label for="customfields_product">Product</label>
+                                <input type="email" class="form-control" id="customfields_product" aria-describedby="customfields_product">
+                                <small  style="display: none;" id="customfields_product" class="form-text text-muted">Explanation of Product here.</small>
+                            </div>
+                            <div class="form-group dropdown-form">
+                                <label for="customfields_region">Region</label>
+                                <input type="email" class="form-control" id="customfields_region" aria-describedby="customfields_region">
+                                <small  style="display: none;" id="customfields_region" class="form-text text-muted">Explanation of Region here.</small>
+                            </div>
+                        </form>
+                        <div class="dropdown-form-control">
+                            <a href="#" class="discard-link"><i class="ionicons ion-ios-arrow-thin-left"></i><span>Discard<span></a>
+                            <button type="button" class="btn-md btn-green"><i class="fa fa-floppy-o"></i><span>Save<span></button>
+                        </div><!-- END .dropdown-form-control  -->
                     </div><!-- END .dropdown-menu -->
-                  </div><!-- END .dropdown -->
+                 </div><!-- END .dropdown -->
 
+                <br><br>
 
-                  </div><!-- END .col-xl-6 -->
+                 </div><!-- END .col-xl-6 -->
               </div><!-- END .row -->
             </div><!-- END .styleguide-body -->
         </div><!--END #editor-content -->
@@ -127,5 +151,27 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="js/lc_switch.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+        	$('input').lc_switch();
+
+        	// triggered each time a field changes status
+        	$('body').delegate('.lcs_check', 'lcs-statuschange', function() {
+        		var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';
+        		console.log('field changed status: '+ status );
+        	});
+
+        	// triggered each time a field is checked
+        	$('body').delegate('.lcs_check', 'lcs-on', function() {
+        		console.log('field is checked');
+        	});
+
+        	// triggered each time a is unchecked
+        	$('body').delegate('.lcs_check', 'lcs-off', function() {
+        		console.log('field is unchecked');
+        	});
+        });
+    </script>
   </body>
 </html>

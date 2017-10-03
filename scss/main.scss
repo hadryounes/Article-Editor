@@ -5,7 +5,9 @@
     "fonts", // Including Open sans, Interface, Ionicons and FontAwesome
      "variables",
      "color-palette",
-     "plugins" // Including LC-Switch
+     "plugins", // Including LC-Switch
+     "editor-sidebar",
+     "editor-content"
 ;
 
 //-------------------------
@@ -16,7 +18,7 @@
 
 h1 {
     font-family: $Open-Sans;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.4px;
 }
@@ -292,6 +294,10 @@ a.a-highlight {
     }
 }
 
+.align-center {
+    text-align: center;
+}
+
 //Content
 .content-text {
     font-family: $Open-Sans;
@@ -315,7 +321,7 @@ a.a-highlight {
 	height: 36px;
 	border-radius: 2px;
 	background-color: white;
-	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.05);
 	border: solid 1px #ccd2d6;
 
     color: $grey-1;
@@ -392,8 +398,11 @@ a.a-highlight {
             text-align: center;
         }
         .nav-link {
-            font-size: 0.875rem;
             text-decoration: none;
+            padding: 10px;
+            font-family: $Open-Sans;
+            font-weight: 600;
+            font-size: 0.6875rem;
             border-bottom: 0;
             border:0;
             color: $grey-3;
@@ -404,8 +413,6 @@ a.a-highlight {
             &.active {
                 color:  $dark-blue-4;
                 border: none;
-                font-family: $Open-Sans;
-                font-weight: 600;
                 border-bottom:  2px solid #A6B2CC;
             }
         }
@@ -587,6 +594,48 @@ a.a-highlight {
 }
 
 
+// Form Inputs
+
+label {
+    font-family: $Interface;
+	font-size: .813rem;
+	font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+	letter-spacing: 0.2px;
+	text-align: left;
+    float: left;
+    clear: left;
+    text-transform: uppercase;
+	color: $grey-2;
+}
+
+input.form-control {
+    height: 36px;
+    border-radius: 2px;
+	background-color: rgba(220, 225, 231, .15);
+	border: solid 1px #dde4ea;
+    font-size: .813rem;
+    font-family: $Open-Sans;
+    color: $dark-blue-4;
+    font-weight: 600;
+}
+
+input.add {
+    background: url(../img/plus-icon.svg),
+                           rgba(220, 225, 231, .15);
+    background-repeat: no-repeat,
+                                        repeat;
+    background-position: right 10px center;
+    &::placeholder {
+        font-family: $Open-Sans;
+        font-style: italic;
+        font-weight: 300;
+        color: #AAB3BA;
+    }
+
+}
+
 
 
 //-------------------------
@@ -616,24 +665,6 @@ body {
     overflow: auto;
 }
 
-#sidebar {
-    position: fixed;
-    top: -1px;
-    right: 0px;
-    width: 280px;
-    height: 100%;
-    //opacity: 0;
-    transition: all .2s;
-    background: white;
-    border-left: 1px solid $border-color;
-    z-index: 999;
-}
-
-#editor-content {
-    position: relative;
-    width: calc(100% - 310px)
-}
-
 .navbar {
     position: fixed;
     z-index: 999;
@@ -645,24 +676,4 @@ body {
     margin: 0;
     text-align: center;
     background-color: #29384b;
-}
-
-.head {
-    position: relative;
-    height: 60px;
-    width: 100%;
-    border-bottom: 1px solid $border-color;
-    padding-top: 18px;
-    padding-left: 0;
-    padding-right: 0
-}
-
-.last-update {
-    float: right;
-    display: inline-block;
-    font-size: 0.8125rem;
-    color: #9da6b0;
-    margin-top: 2px;
-    font-weight: 400;
-    font-family: $Open-Sans;
 }

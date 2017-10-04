@@ -5,7 +5,7 @@
     "fonts", // Including Open sans, Interface, Ionicons and FontAwesome
      "variables",
      "color-palette",
-     "plugins", // Including LC-Switch
+     //"plugins", // Including LC-Switch
      "editor-sidebar",
      "editor-content"
 ;
@@ -212,7 +212,6 @@ h4 {
 }
 
 .btn-circular-grey-full {
-    //@extend .btn-circular-blue-full;
     border: 0;
     background: $grey-6;
     color: white;
@@ -334,7 +333,6 @@ a.a-highlight {
 
     &:active, &:focus {
         border: 1px solid $grey-6;
-        //box-shadow: 0;
         outline:0;
     }
 }
@@ -633,6 +631,15 @@ input.add {
         font-weight: 300;
         color: #AAB3BA;
     }
+}
+
+input.search {
+    @extend input.add;
+    background: url(../img/search-icon.svg),
+                           rgba(220, 225, 231, .15);
+    background-position: right 10px center;
+    background-repeat: no-repeat,
+                                        repeat;
 
 }
 
@@ -676,4 +683,263 @@ body {
     margin: 0;
     text-align: center;
     background-color: #29384b;
+}
+
+
+.modal {
+    .modal-dialog {
+        max-width: 80%; //sets the width of a modal
+    }
+    .modal-content {
+        border-radius: 0;
+        border: 0;
+        box-shadow: 0 2px 6px 0 rgba (0, 0, 0, .3);
+        .modal-header {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            display: block;
+            border-bottom: 0;
+
+            .modal-title {
+                h4 {
+                    font-family: $Open-Sans;
+                	font-size: 1.5rem;
+                	font-weight: 600;
+                	letter-spacing: 0.4px;
+                	text-align: center;
+                	color: #374c61;
+                    text-transform: none;
+                }
+
+                h5 {
+                    font-family: $Open-Sans;
+                	font-size: .875rem;
+                	letter-spacing: 0.2px;
+                    font-weight: 400;
+                	text-align: center;
+                	color: #aeb7be;
+                }
+            }
+            button.close {
+                position: absolute;
+                right: 18px;
+                top: 8px;
+            }
+        }
+
+        .modal-body {
+            padding-top: 0px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+
+#comments_tabs {
+
+    border-bottom: 1px solid #ccd2d6;
+    border-top: 1px solid #ccd2d6;
+    padding-top: 3px;
+
+    .nav-item {
+
+        .nav-link {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: .875rem;
+            color: #798996;
+
+        }
+
+        .active {
+            border-bottom: 2px solid $bright-blue;
+            color: $bright-blue;
+            font-weight: 500;
+        }
+    }
+
+}
+
+#comments_content {
+    position: relative;
+    margin: 1rem auto;
+
+
+
+    .comments-filter {
+
+        .form-inline {
+            justify-content: space-between;
+        }
+
+        .flex-element {
+            display: inherit;
+        }
+
+        //Dropdowns
+        .dropdown {
+            //margin-right: 18px;
+            .dropdown-btn {
+                width: 112px;
+            }
+
+            .dropdown-menu {
+                width: auto;
+                min-width: 112px;
+                &::before {
+                    left: 10px;
+                    right: auto;
+                }
+            }
+        }
+
+        // Search Input
+        input.search {
+            margin-right: 18px;
+            margin-left: 18px;
+            width: 220px;
+            padding-right: 35px;
+        }
+
+        // Label
+        label {
+            margin-left: 18px;
+            margin-top: 0px;
+            margin-right: 1rem;
+            font-family: $Open-Sans;
+        	font-size: .813rem;
+        	font-weight: 600;
+        	letter-spacing: 1.7px;
+        	text-align: left;
+        	color: #7d8a96;
+        }
+
+        .form-check-input {
+            margin-right: 12px;
+        }
+    }
+
+    // List of Comments
+
+    .comments-list {
+        position: relative;
+        width: 100%;
+        .comments-item {
+            width: 100%;
+            height: 128px;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+
+            .form-check-input {
+                position: relative;
+                display: inline-block;
+                margin-top: .25rem;
+                margin-left: 0;
+                margin-right: 5px;
+            }
+
+            h5 {
+                font-family: $Open-Sans;
+                display: inline-block;
+                width: auto;
+            	font-size: .813rem;
+            	letter-spacing: -0.1px;
+            	text-align: left;
+                font-weight: 600;
+            	color: $bright-blue;
+            }
+
+            .comment-details {
+                position: relative;
+                margin-left: 23px;
+                margin-top: 5px;
+
+                .user-avatar {
+                    display: inline-block;
+                    height: 30px;
+                    width: 30px;
+                    padding-top: 6px;
+                    margin-right: 3px;
+                    vertical-align: middle;
+                    text-decoration: none;
+                    border-radius: 20px;
+                    color: white;
+                    background-color: $orange;
+                    text-transform: uppercase;
+                    font-family: $Open-Sans;
+                    font-size: .813rem;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                .user-name {
+                    font-family: $Open-Sans;
+                	font-size: .813rem;
+                	font-weight: 600;
+                	letter-spacing: -0.1px;
+                	text-align: left;
+                	color: #3181da;
+                    text-decoration: none;
+                }
+
+                .user-comment {
+                    font-size: .813rem;
+                	letter-spacing: -0.1px;
+                	text-align: left;
+                	color: #374c61;
+                    margin-left: 38px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .comment-actions {
+                list-style: none;
+                margin-top: 5px;
+                margin-left: 22px;
+                margin-bottom: 0;
+                li {
+                    display: inline;
+                    margin-right: 1.3rem;
+
+                    a {
+                        text-decoration: none;
+                        font-family: $Open-Sans;
+                        font-weight: 600;
+                        color: $grey-3;
+                        font-size: .813rem;
+                        &:hover {
+                            color: $dark-blue-4;
+                        }
+                        i {
+                            margin-right: 3px;
+                        }
+                    }
+
+                    .approved {
+                        color: #7cb353;
+                        font-weight: 400;
+                        &:hover {
+                            color: #7cb353;
+                        }
+                    }
+                }
+            }
+        }
+
+        .comment-approved {
+            background-color: rgba(124, 179, 83, .2);
+        	border: 1px solid  rgba(124, 179, 83, .2);
+            border-left: 3px solid rgba(124, 179, 83, 1);
+        }
+
+        .comment-pending {
+            background-color: rgba(180,204,227, .15);
+        	border: 1px solid  rgba(180,204,227, .15);
+            border-left: 3px solid rgba(114, 129, 144, 1);
+        }
+
+    }
+
+
 }

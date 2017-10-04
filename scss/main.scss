@@ -850,6 +850,26 @@ body {
             	color: $bright-blue;
             }
 
+            .comment-issue {
+                float: right;
+                border-radius: 20px;
+                padding: 2px 10px;
+                font-size: .68rem;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+            }
+
+            .no-issue {
+                background: $grey-5;
+            }
+
+            .has-issue {
+                background: #f8c654;
+            }
+
+
+
             .comment-details {
                 position: relative;
                 margin-left: 23px;

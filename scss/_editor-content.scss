@@ -14,11 +14,17 @@
         .last-update {
             float: right;
             display: inline-block;
-            font-size: 0.8125rem;
-            color: #9da6b0;
-            margin-top: 2px;
-            font-weight: 400;
-            font-family: $Open-Sans;
+            a {
+                font-size: 0.8125rem;
+                color: #9da6b0;
+                margin-top: 2px;
+                font-weight: 400;
+                font-family: $Open-Sans;
+                text-decoration: none;
+                &:hover {
+                    color: $dark-blue-4;
+                }
+            }
         }
     }
 
@@ -84,7 +90,7 @@
                         i {
                             float: right;
                             font-size: .813rem;
-                            line-height: 23px; 
+                            line-height: 23px;
                         }
                     }
                     .new-language {
@@ -324,6 +330,39 @@
         }
     }
 
+
+    // Revisions style
+    .revisions-actions {
+        position: relative;
+        width: 100%;
+        margin-top: 15px;
+        padding-bottom: 15px;
+        //border-bottom: 1px solid $grey-9;
+        .change-status {
+            margin-top: 7px;
+            font-size: .875rem;
+            .blue {
+                font-weight: 600;
+                color: $dark-blue-4;
+            }
+            .green {
+                font-weight: 600;
+                color: #76b04b;
+            }
+            .red {
+                font-weight: 600;
+                color: #e17f7f;
+            }
+        }
+        .ctas {
+            float: right;
+            button {
+                padding-bottom: 1px;
+                margin-left: 10px;
+            }
+        }
+        // To do: Revisions Article styling
+    }
 
 
 

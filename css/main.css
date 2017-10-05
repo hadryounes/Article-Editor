@@ -152,12 +152,16 @@
     padding-right: 0; }
     #editor-content .head .last-update {
       float: right;
-      display: inline-block;
-      font-size: 0.8125rem;
-      color: #9da6b0;
-      margin-top: 2px;
-      font-weight: 400;
-      font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
+      display: inline-block; }
+      #editor-content .head .last-update a {
+        font-size: 0.8125rem;
+        color: #9da6b0;
+        margin-top: 2px;
+        font-weight: 400;
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        text-decoration: none; }
+        #editor-content .head .last-update a:hover {
+          color: #4f637d; }
   #editor-content .editor-body {
     position: relative;
     width: 100%;
@@ -378,6 +382,50 @@
         color: #00c143;
         font-size: 1.4rem;
         vertical-align: middle; }
+  #editor-content .revisions-actions {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 15px; }
+    #editor-content .revisions-actions .change-status {
+      margin-top: 7px;
+      font-size: .875rem; }
+      #editor-content .revisions-actions .change-status .blue {
+        font-weight: 600;
+        color: #4f637d; }
+      #editor-content .revisions-actions .change-status .green {
+        font-weight: 600;
+        color: #76b04b; }
+      #editor-content .revisions-actions .change-status .red {
+        font-weight: 600;
+        color: #e17f7f; }
+    #editor-content .revisions-actions .ctas {
+      float: right; }
+      #editor-content .revisions-actions .ctas button {
+        padding-bottom: 1px;
+        margin-left: 10px; }
+
+#revisions-sidebar {
+  position: fixed;
+  top: -1px;
+  right: 0px;
+  width: 280px;
+  height: 100%;
+  transition: all .2s;
+  background: #F6F8F9;
+  padding: 18px 16px;
+  border-left: 1px solid rgba(51, 63, 72, 0.1);
+  z-index: 999;
+  box-shadow: 0px 0px 4px 0px rgba(51, 63, 72, 0.1) inset; }
+  #revisions-sidebar .sidebar-title h3 {
+    font-family: "Interface", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #29384b;
+    width: auto;
+    float: left; }
+  #revisions-sidebar .sidebar-title .close {
+    float: right;
+    margin-top: -3px; }
 
 h1 {
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;

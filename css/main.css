@@ -404,6 +404,9 @@
       #editor-content .revisions-actions .ctas button {
         padding-bottom: 1px;
         margin-left: 10px; }
+        #editor-content .revisions-actions .ctas button i.ionicons {
+          font-size: 1rem;
+          margin-top: 1px; }
   #editor-content .revisions-article {
     position: relative;
     width: 100%;

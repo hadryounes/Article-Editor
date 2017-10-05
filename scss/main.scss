@@ -190,10 +190,12 @@ h4 {
     &:hover {
         background: $blue;
         color: white;
+        cursor: pointer;
     }
 
     &:active, &:focus {
         background: darken ( $blue, 5%);
+        cursor: pointer;
     }
 
     i.fa {

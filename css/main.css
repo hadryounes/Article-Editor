@@ -183,6 +183,17 @@
       border-radius: 4px;
       padding-top: 7px; }
 
+.tooltip {
+  margin-left: 19px; }
+  .tooltip .tooltip-inner {
+    background-color: #213243 !important;
+    opacity: 1; }
+  .tooltip .arrow:before {
+    border-right-color: #213243 !important;
+    margin-top: -4px;
+    content: "";
+    border-width: 4px 4px 4px 1px; }
+
 #sidebar {
   position: fixed;
   top: -1px;
@@ -800,9 +811,11 @@ h4 {
   color: white; }
   .btn-square-blue-full:hover {
     background: #004694;
-    color: white; }
+    color: white;
+    cursor: pointer; }
   .btn-square-blue-full:active, .btn-square-blue-full:focus {
-    background: darken #004694, 5%; }
+    background: darken #004694, 5%;
+    cursor: pointer; }
   .btn-square-blue-full i.fa {
     margin-right: 0;
     vertical-align: 0px;

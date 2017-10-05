@@ -87,3 +87,18 @@
     }
 
 }
+
+.tooltip {
+    //background: $dark-blue-1;
+    margin-left: 19px;
+    .tooltip-inner {
+        background-color: rgba(33, 50, 67, 1) !important;
+        opacity: 1;
+    }
+    .arrow:before {
+        border-right-color: #213243 !important;
+        margin-top: -4px;
+        content: "";
+        border-width: 4px 4px 4px 1px;
+    }
+}

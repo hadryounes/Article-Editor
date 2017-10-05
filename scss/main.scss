@@ -5,7 +5,8 @@
     "fonts", // Including Open sans, Interface, Ionicons and FontAwesome
      "variables",
      "color-palette",
-     //"plugins", // Including LC-Switch
+     "plugins", // Including LC-Switch
+     "navbar",
      "editor-sidebar",
      "editor-content",
       "revisions-sidebar"
@@ -689,19 +690,6 @@ body {
     min-width: 600px;
     transition: all .2s;
     overflow: auto;
-}
-
-.navbar {
-    position: fixed;
-    z-index: 999;
-    height: 100%;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    width: 60px;
-    margin: 0;
-    text-align: center;
-    background-color: #29384b;
 }
 
 

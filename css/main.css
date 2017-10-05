@@ -31,6 +31,108 @@
   font-style: italic;
   font-weight: 700;
   src: url("../fonts/Interface-BoldItalic.woff2?v=1.5") format("woff2"), url("../fonts/Interface-BoldItalic.woff?v=1.5") format("woff"); }
+.lcs_wrap {
+  display: inline-block;
+  direction: ltr;
+  height: 28px;
+  vertical-align: middle; }
+  .lcs_wrap input {
+    display: none; }
+
+.lcs_switch {
+  display: inline-block;
+  position: relative;
+  width: 73px;
+  height: 28px;
+  border-radius: 30px;
+  background: #9198A0;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+
+.lcs_cursor {
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: rgba 0, 0, 0, 0.18;
+  z-index: 10;
+  -webkit-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  transition: all .2s linear; }
+
+.lcs_label {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 18px;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  width: 33px;
+  top: 5px;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out .1s;
+  -ms-transition: all .2s ease-in-out .1s;
+  transition: all .2s ease-in-out .1s; }
+
+.lcs_label.lcs_label_on {
+  left: -70px;
+  z-index: 6; }
+
+.lcs_label.lcs_label_off {
+  right: -70px;
+  z-index: 5; }
+
+/* on */
+.lcs_switch.lcs_on {
+  background: #00c143;
+  box-shadow: 0 0 2px #00c143 inset; }
+
+.lcs_switch.lcs_on .lcs_cursor {
+  left: 48px; }
+
+.lcs_switch.lcs_on .lcs_label_on {
+  left: 10px;
+  opacity: 1; }
+
+/* off */
+.lcs_switch.lcs_off {
+  background: #9198A0;
+  box-shadow: 0px 0px 2px inset #grey-3; }
+
+.lcs_switch.lcs_off .lcs_cursor {
+  left: 3px; }
+
+.lcs_switch.lcs_off .lcs_label_off {
+  right: 10px;
+  opacity: 1; }
+
+/* disabled */
+.lcs_switch.lcs_disabled {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  cursor: default; }
+
+.navbar {
+  position: fixed;
+  z-index: 999;
+  height: 100%;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 60px;
+  margin: 0;
+  text-align: center;
+  background-color: #29384b; }
+
 #sidebar {
   position: fixed;
   top: -1px;
@@ -464,10 +566,11 @@
   height: 100%;
   transition: all .2s;
   background: #F6F8F9;
-  padding: 18px 16px;
+  padding: 20px 16px;
   border-left: 1px solid rgba(51, 63, 72, 0.1);
   z-index: 999;
-  box-shadow: 0px 0px 4px 0px rgba(51, 63, 72, 0.1) inset; }
+  box-shadow: 0px 0px 4px 0px rgba(51, 63, 72, 0.1) inset;
+  z-index: 1; }
   #revisions-sidebar .sidebar-title h3 {
     font-family: "Interface", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.2rem;
@@ -477,6 +580,52 @@
   #revisions-sidebar .sidebar-title .close {
     float: right;
     margin-top: -3px; }
+  #revisions-sidebar .sidebar-timeline {
+    position: relative;
+    width: 100%;
+    margin-top: 45px;
+    height: 85vh; }
+    #revisions-sidebar .sidebar-timeline::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background: #C6CED4;
+      top: 0;
+      bottom: 0;
+      left: 9px;
+      right: 0;
+      margin: 0;
+      z-index: 2; }
+    #revisions-sidebar .sidebar-timeline .timeline-block {
+      display: block;
+      margin-bottom: 30px;
+      margin-top: -2px; }
+      #revisions-sidebar .sidebar-timeline .timeline-block .timeline-icon {
+        z-index: 10;
+        position: absolute;
+        margin-left: 0px;
+        margin-top: -5px; }
+      #revisions-sidebar .sidebar-timeline .timeline-block h6 {
+        font-size: .813rem;
+        color: #7A8A96;
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
+        margin-left: 25px;
+        margin-bottom: 3px; }
+        #revisions-sidebar .sidebar-timeline .timeline-block h6 a {
+          text-decoration: none; }
+      #revisions-sidebar .sidebar-timeline .timeline-block .revision-author {
+        font-size: .813rem;
+        color: #7A8A96;
+        font-weight: 400;
+        text-decoration: none;
+        margin-left: 25px; }
+    #revisions-sidebar .sidebar-timeline .current h6 {
+      color: #4f637d;
+      font-weight: 600; }
+    #revisions-sidebar .sidebar-timeline .current .revision-author {
+      color: #4f637d; }
 
 h1 {
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
@@ -968,18 +1117,6 @@ body {
   min-width: 600px;
   transition: all .2s;
   overflow: auto; }
-
-.navbar {
-  position: fixed;
-  z-index: 999;
-  height: 100%;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  width: 60px;
-  margin: 0;
-  text-align: center;
-  background-color: #29384b; }
 
 .modal .modal-dialog {
   max-width: 80%; }

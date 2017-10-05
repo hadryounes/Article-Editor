@@ -244,95 +244,98 @@
       width: 100%;
       margin-top: 25px; }
       #editor-content .editor-body .article-content p {
-        line-height: 1.6rem;
+        line-height: 2rem;
         margin-left: 40px; }
-      #editor-content .editor-body .article-content .annotation .dropdown-toggle::after {
-        display: none; }
-      #editor-content .editor-body .article-content .annotation .dropdown-menu {
-        width: 333px;
-        margin-top: -25px;
-        margin-left: 13%;
-        border-left: 3px solid #0062d0;
-        border-top: 1px solid #d9dee3;
-        border-radius: 0;
-        padding: 10px; }
-        #editor-content .editor-body .article-content .annotation .dropdown-menu:before {
-          content: "";
-          width: 0;
-          height: 0;
-          position: absolute;
-          bottom: 90%;
-          left: -14px;
-          border-width: 0 8px 8px 8px;
-          border-style: solid;
-          border-color: #0062d0 transparent;
-          transform: rotate(-90deg); }
-        #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment {
-          display: block; }
-          #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-details .user-avatar {
-            display: inline-block;
-            height: 30px;
-            width: 30px;
-            padding-top: 6px;
-            margin-right: 3px;
-            vertical-align: middle;
-            text-decoration: none;
-            border-radius: 20px;
-            color: white;
-            background-color: #ffbc4f;
-            text-transform: uppercase;
-            font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-            font-size: .813rem;
-            font-weight: 600;
-            text-align: center; }
-          #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-details .annotation-menu {
-            float: right;
-            color: #A9AFB7;
-            font-size: 1rem;
-            vertical-align: middle; }
-          #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-details .user-name {
-            text-decoration: none;
-            font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-            font-weight: 600;
-            font-size: .875rem;
-            color: #9198A0;
-            display: inline-block;
-            vertical-align: middle; }
-          #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-details .comment-date {
-            font-size: .75rem;
-            margin-left: 38px;
-            margin-top: 5px;
-            line-height: 0;
-            display: block;
-            text-decoration: none;
-            color: #b3babf; }
-          #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-comment {
-            font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            color: #7a8995;
-            margin-left: 38px;
-            margin-top: 15px;
-            display: block;
-            margin-bottom: 15px; }
-        #editor-content .editor-body .article-content .annotation .dropdown-menu .comment-case {
-          display: block;
-          width: 100%;
-          border-top: 1px solid #EDEDED;
-          padding-top: 15px;
-          margin-bottom: 6px; }
-          #editor-content .editor-body .article-content .annotation .dropdown-menu .comment-case input {
-            border-radius: 20px;
-            width: calc(100% - 45px);
-            display: inline-block;
-            margin-right: 0px; }
-            #editor-content .editor-body .article-content .annotation .dropdown-menu .comment-case input::placeholder {
+      #editor-content .editor-body .article-content .annotation {
+        margin-left: 38px;
+        margin-top: 33px; }
+        #editor-content .editor-body .article-content .annotation .dropdown-toggle::after {
+          display: none; }
+        #editor-content .editor-body .article-content .annotation .dropdown-menu {
+          width: 333px;
+          margin-top: -25px;
+          margin-left: 13%;
+          border-left: 3px solid #0062d0;
+          border-top: 1px solid #d9dee3;
+          border-radius: 0;
+          padding: 10px; }
+          #editor-content .editor-body .article-content .annotation .dropdown-menu:before {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 90%;
+            left: -14px;
+            border-width: 0 8px 8px 8px;
+            border-style: solid;
+            border-color: #0062d0 transparent;
+            transform: rotate(-90deg); }
+          #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment {
+            display: block; }
+            #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-details .user-avatar {
+              display: inline-block;
+              height: 30px;
+              width: 30px;
+              padding-top: 6px;
+              margin-right: 3px;
+              vertical-align: middle;
+              text-decoration: none;
+              border-radius: 20px;
+              color: white;
+              background-color: #ffbc4f;
+              text-transform: uppercase;
               font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-              font-style: italic;
-              font-weight: 300;
-              color: #AAB3BA; }
-          #editor-content .editor-body .article-content .annotation .dropdown-menu .comment-case button {
-            float: right; }
+              font-size: .813rem;
+              font-weight: 600;
+              text-align: center; }
+            #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-details .annotation-menu {
+              float: right;
+              color: #A9AFB7;
+              font-size: 1rem;
+              vertical-align: middle; }
+            #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-details .user-name {
+              text-decoration: none;
+              font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+              font-weight: 600;
+              font-size: .875rem;
+              color: #9198A0;
+              display: inline-block;
+              vertical-align: middle; }
+            #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-details .comment-date {
+              font-size: .75rem;
+              margin-left: 38px;
+              margin-top: 5px;
+              line-height: 0;
+              display: block;
+              text-decoration: none;
+              color: #b3babf; }
+            #editor-content .editor-body .article-content .annotation .dropdown-menu .annotation-comment .user-comment {
+              font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+              font-size: 14px;
+              font-weight: 600;
+              color: #7a8995;
+              margin-left: 38px;
+              margin-top: 15px;
+              display: block;
+              margin-bottom: 15px; }
+          #editor-content .editor-body .article-content .annotation .dropdown-menu .comment-case {
+            display: block;
+            width: 100%;
+            border-top: 1px solid #EDEDED;
+            padding-top: 15px;
+            margin-bottom: 6px; }
+            #editor-content .editor-body .article-content .annotation .dropdown-menu .comment-case input {
+              border-radius: 20px;
+              width: calc(100% - 45px);
+              display: inline-block;
+              margin-right: 0px; }
+              #editor-content .editor-body .article-content .annotation .dropdown-menu .comment-case input::placeholder {
+                font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+                font-style: italic;
+                font-weight: 300;
+                color: #AAB3BA; }
+            #editor-content .editor-body .article-content .annotation .dropdown-menu .comment-case button {
+              float: right; }
   #editor-content .editor-footer {
     position: fixed;
     bottom: 0;
@@ -570,6 +573,19 @@ a.a-highlight {
   a.a-highlight:hover {
     background-color: #0062d0;
     color: white; }
+  a.a-highlight:before {
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    content: "1";
+    color: white;
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 600;
+    line-height: 15px;
+    height: 18px;
+    width: 17px;
+    background: url(../img/annotation-tag.svg) no-repeat;
+    margin-top: -19px;
+    position: absolute; }
 
 .align-center {
   text-align: center; }

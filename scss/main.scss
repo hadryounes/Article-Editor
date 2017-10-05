@@ -291,6 +291,25 @@ a.a-highlight {
         background-color: $bright-blue;
         color: white;
     }
+
+    &:before {
+        font-family: $Open-Sans;
+        content: "1";
+        color: white;
+        text-align: center;
+        font-size: .7rem;
+        font-weight: 600;
+        line-height: 15px;
+        //padding-top: 2px;
+        height: 18px;
+        width: 17px;
+        //left: 100%;
+        background: url(../img/annotation-tag.svg) no-repeat;
+        //right: 0;
+        //background: $bright-blue;
+        margin-top: -19px;
+        position: absolute;
+    }
 }
 
 .align-center {
@@ -640,7 +659,6 @@ input.search {
     background-position: right 10px center;
     background-repeat: no-repeat,
                                         repeat;
-
 }
 
 

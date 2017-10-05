@@ -120,6 +120,8 @@ h4 {
     }
 }
 
+
+
 .btn-green-full {
     background: $green;
     letter-spacing: -0.1px;
@@ -138,6 +140,22 @@ h4 {
 
     &:focus{
         outline: 0;
+    }
+}
+
+.btn-blue-full {
+    @extend .btn-green-full;
+    padding: 0 25px;
+    background: $bright-blue;
+    &:hover, &:active {
+        background: darken( $bright-blue, 3% );
+        color: white;
+    }
+    i.ionicons {
+        font-size: 1.5rem;
+        margin-right: 0;
+        margin-left: 7px;
+        vertical-align: -2px;
     }
 }
 
@@ -967,8 +985,58 @@ body {
         	border: 1px solid  rgba(180,204,227, .15);
             border-left: 3px solid rgba(114, 129, 144, 1);
         }
+    }
+}
 
+
+// New Article modal
+
+#new-article-modal {
+
+    .modal-dialog {
+        max-width: 60%;
     }
 
+    .box {
+        position: relative;
+        height: 140px;
+        width: 100%;
+        border-radius: 3px;
+    	background-color: white;
+    	box-shadow: 0 1px 4px 0 rgba(0 ,0, 0, .12);
+        display: block;
+        margin-bottom: 20px;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 40px;
+        color: #9DAFBE;
+        &:hover {
+            color: darken( #9DAFBE, 20% );
+            border: 1px solid $bright-blue;
+            padding-top: 39px;
+        }
+
+
+        .box-icon {
+            img {
+                display: block;
+                margin-bottom: 7px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .modal-footer {
+        justify-content: space-between;
+        button.btn-blue-full {
+            margin-right: 12px;
+        }
+        .cancel-link {
+            margin-left: 12px;
+            text-decoration: none;
+            color: $grey-6;
+        }
+    }
 
 }

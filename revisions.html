@@ -23,7 +23,7 @@
             <li class="menu-item"><a href="#"><i class="ion-upload" data-toggle="tooltip" data-placement="right" title="Uploads"></i></a></li>
         </ul>
         <div class="new-article">
-            <button type="button" class="btn-square btn-square-blue-full"><i class="ionicons ion-plus"></i></button>
+            <button type="button" class="btn-square btn-square-blue-full" data-toggle="modal" data-target="#new-article-modal"><i class="ionicons ion-plus"></i></button>
         </div><!-- END .new-article -->
         <ul class="bottom-menu">
             <li class="bottom-menu-item"><a href="#"><i class="ion-help-circled" data-toggle="tooltip" data-placement="right" title="Help"></i></a></li>
@@ -157,6 +157,86 @@
         </div><!-- END #revisions-sidebar -->
 
     </div><!--END #main-content -->
+
+    <!-- New Article Modal -->
+    <div class="modal fade" id="new-article-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <div class="modal-title">
+                    <h4  id="exampleModalLabel">New Article</h4>
+                    <h5>Create a new article from a blank page or based on a template</h5>
+                </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="img/close-icon.svg" alt="close" height="12">
+                    </button>
+                </div><!-- END .modal-header -->
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <a href="#" class="box">
+                                <div class="box-icon">
+                                    <img src="img/box-new.svg" alt="Blank" height="45">
+                                    <span>Blank</span>
+                                </div><!-- END .box-icon -->
+                            </a><!-- END .box -->
+                        </div><!-- END .col-md-4 -->
+
+                        <div class="col-md-4">
+                            <a href="#" class="box">
+                                <div class="box-icon">
+                                    <img src="img/box-faq.svg" alt="Blank" height="45">
+                                    <span>FAQ</span>
+                                </div><!-- END .box-icon -->
+                            </a><!-- END .box -->
+                        </div><!-- END .col-md-4 -->
+
+                        <div class="col-md-4">
+                            <a href="#" class="box">
+                                <div class="box-icon">
+                                    <img src="img/box-announcement.svg" alt="Blank" height="45">
+                                    <span>Announcement</span>
+                                </div><!-- END .box-icon -->
+                            </a><!-- END .box -->
+                        </div><!-- END .col-md-4 -->
+
+                        <div class="col-md-4">
+                            <a href="#" class="box">
+                                <div class="box-icon">
+                                    <img src="img/box-howto.svg" alt="Blank" height="45">
+                                    <span>How-To Guide</span>
+                                </div><!-- END .box-icon -->
+                            </a><!-- END .box -->
+                        </div><!-- END .col-md-4 -->
+
+                        <div class="col-md-4">
+                            <a href="#" class="box">
+                                <div class="box-icon">
+                                    <img src="img/box-downloads.svg" alt="Blank" height="45">
+                                    <span>Downloads Center</span>
+                                </div><!-- END .box-icon -->
+                            </a><!-- END .box -->
+                        </div><!-- END .col-md-4 -->
+
+                        <div class="col-md-4">
+                            <a href="#" class="box">
+                                <div class="box-icon">
+                                    <img src="img/box-custom.svg" alt="Blank" height="45">
+                                    <span>Custom Templates</span>
+                                </div><!-- END .box-icon -->
+                            </a><!-- END .box -->
+                        </div><!-- END .col-md-4 -->
+
+                    </div>
+                </div><!-- END .modal-body -->
+                <div class="modal-footer">
+                    <a href="#" class="cancel-link" data-dismiss="modal" aria-label="Close">Cancel</a>
+                    <button type="button" class="btn-lg btn-blue-full"><span>Create<span> <i class="ionicons ion-ios-arrow-thin-right"></i></button>
+                </div><!-- END .modal-footer -->
+            </div><!-- END .modal-content -->
+        </div><!-- END .modal-dialog -->
+    </div><!-- END .modal -->
 
 
     <!-- Optional JavaScript -->

@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-      
+
       <nav class="navbar">
           <div class="logo">
               <a href="#"><img src="img/helpjuice_logo.svg" alt="logo" height="24"></a>
           </div><!-- END .logo -->
           <ul class="menu">
-              <li class="menu-item"><a href="#"><i class="ion-ios-home"></i></a></li>
-              <li class="menu-item"><a href="#"><i class="ion-stats-bars"></i></a></li>
-              <li class="menu-item"><a href="#"><i class="ion-person-stalker"></i></a></li>
-              <li class="menu-item"><a href="#"><i class="ion-ios-settings-strong"></i></a></li>
-              <li class="menu-item"><a href="#"><i class="ion-upload"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-ios-home" data-toggle="tooltip" data-placement="right" title="Dashboard"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-stats-bars" data-toggle="tooltip" data-placement="right" title="Analytics"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-person-stalker" data-toggle="tooltip" data-placement="right" title="Users"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-ios-settings-strong" data-toggle="tooltip" data-placement="right" title="Settings"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-upload" data-toggle="tooltip" data-placement="right" title="Uploads"></i></a></li>
           </ul>
           <div class="new-article">
-              <button type="button" class="btn-square btn-square-blue-full"><i class="ionicons ion-plus"></i></button>
+              <button type="button" class="btn-square btn-square-blue-full" data-toggle="modal" data-target="#new-article-modal"><i class="ionicons ion-plus"></i></button>
           </div><!-- END .new-article -->
           <ul class="bottom-menu">
-              <li class="bottom-menu-item"><a href="#"><i class="ion-help-circled"></i></a></li>
-              <li class="bottom-menu-item"><a href="#"><i class="ion-ios-bell"></i></a></li>
+              <li class="bottom-menu-item"><a href="#"><i class="ion-help-circled" data-toggle="tooltip" data-placement="right" title="Help"></i></a></li>
+              <li class="bottom-menu-item"><a href="#"><i class="ion-ios-bell" data-toggle="tooltip" data-placement="right" title="Notifications"></i></a></li>
           </ul>
           <div class="user-profile-link">
               <a href="#" class="user-avatar">EH</a>
@@ -156,195 +156,6 @@
                     </div><!--END .col-xl-4-->
                 </div>
             </div><!--END #editor-footer -->
-
-
-            <!-- Comments Modal -->
-            <div class="modal fade" id="article-comments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                     <div class="modal-header">
-                        <div class="modal-title">
-                            <h4  id="exampleModalLabel">Comments</h4>
-                            <h5>Manage user comments on { Article Title }</h5>
-                        </div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <img src="img/close-icon.svg" alt="close" height="12">
-                        </button>
-                    </div><!-- END .modal-header -->
-                    <div class="modal-body">
-                        <!-- <ul class="nav" id="comments-tabs">
-                          <li class="nav-item" id="comments-tab_all">
-                            <a class="nav-link active" href="#">All</a>
-                          </li>
-                          <li class="nav-item"  id="comments-tab_approved">
-                            <a class="nav-link" href="#">Approved</a>
-                          </li>
-                          <li class="nav-item" id="comments_pending">
-                            <a class="nav-link" href="#">Pending</a>
-                          </li>
-                          <li class="nav-item" id="comments_spam">
-                            <a class="nav-link disabled" href="#">Spam</a>
-                          </li>
-                          <li class="nav-item" id="comments_deleted">
-                            <a class="nav-link disabled" href="#">Deleted</a>
-                          </li>
-                        </ul> -->
-
-                        <ul class="nav" id="comments_tabs" role="tablist">
-
-                            <li class="nav-item">
-                                 <a class="nav-link active" id="comments_all-tab" data-toggle="tab" href="#comments_all" role="tab" aria-controls="comments_all" aria-expanded="true">All</a>
-                            </li>
-
-                            <li class="nav-item">
-                                 <a class="nav-link" id="comments_approved-tab" data-toggle="tab" href="#comments_approved" role="tab" aria-controls="comments_approved">Approved</a>
-                            </li>
-
-                            <li class="nav-item">
-                                 <a class="nav-link" id="comments_pending-tab" data-toggle="tab" href="#comments_pending" role="tab" aria-controls="comments_pending">Pending</a>
-                            </li>
-
-                            <li class="nav-item">
-                                 <a class="nav-link" id="comments_spam-tab" data-toggle="tab" href="#comments_spam" role="tab" aria-controls="comments_spam">Spam</a>
-                            </li>
-
-                            <li class="nav-item">
-                                 <a class="nav-link" id="comments_deleted-tab" data-toggle="tab" href="#comments_deleted" role="tab" aria-controls="comments_deleted">Deleted</a>
-                            </li>
-
-                        </ul>
-
-
-                        <div class="tab-content" id="comments_content">
-
-                            <div class="tab-pane fade show active" id="comments_all" role="tabpanel" aria-labelledby="comments_all-tab">
-
-                                <div class="comments-filter">
-                                    <form class="form-inline">
-                                        <div class="flex-element">
-                                            <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-                                                <input class="form-check-input" type="checkbox">
-                                            </div>
-
-                                            <label class="sr-only" for="inlineFormInputName2">Actions</label>
-
-                                            <div class="dropdown">
-                                                <button class="dropdown-btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Actions
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" href="#">Action 1</a>
-                                                    <a class="dropdown-item" href="#">Action 2</a>
-                                                    <a class="dropdown-item" href="#">Action 3</a>
-                                                </div><!-- END .dropdown-menu -->
-                                            </div><!-- END .dropdown -->
-
-                                            <div class="form-group" >
-                                                <label class="sr-only" for="comments-search">Search</label>
-                                                <input type="text" class="form-control search" id="comments-search" placeholder="Search">
-                                            </div>
-                                            <!-- <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="Jane Doe"> -->
-                                        </div>
-                                        <div class="flex-element" >
-                                            <div class="form-group">
-                                                <label>Filter By</label>
-                                                <div class="dropdown">
-                                                    <button class="dropdown-btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Position
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <a class="dropdown-item" href="#">Option 1</a>
-                                                        <a class="dropdown-item" href="#">Option 2</a>
-                                                        <a class="dropdown-item" href="#">Option 3</a>
-                                                    </div><!-- END .dropdown-menu -->
-                                                </div><!-- END .dropdown -->
-                                            </div><!-- END .form-group -->
-
-                                            <div class="form-group">
-                                                <label>Sort By</label>
-                                                <div class="dropdown">
-                                                    <button class="dropdown-btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Newest
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <a class="dropdown-item" href="#">Option 1</a>
-                                                        <a class="dropdown-item" href="#">Option 2</a>
-                                                        <a class="dropdown-item" href="#">Option 3</a>
-                                                    </div><!-- END .dropdown-menu -->
-                                                </div><!-- END .dropdown -->
-                                            </div><!-- END .form-group -->
-
-                                            <button type="submit" class="btn btn-primary sr-only">Submit</button>
-
-                                        </div><!-- END .flex-element -->
-                                    </form>
-                                    <hr>
-                                </div><!-- END .comments-filter  -->
-
-                                <div class="comments-list">
-                                    <!-- Comment 1 -->
-                                    <div class="comments-item comment-approved">
-                                        <input class="form-check-input" type="checkbox">
-                                        <h5>Barbeque Techniques: Two Methods To Consider</h5>
-                                        <a href="#" class="comment-issue has-issue">Contains link(s)</a>
-                                        <div class="comment-details">
-                                            <div class="user-avatar">W.Z</div>
-                                            <a href="#" class="user-name">Kenneth Barber</a>
-                                            <p class="user-comment">Legend tells that that the Emerald Buddha was created in Pataliputra, India, which is now the city of Patna in 43 BCE by Nagasena… more</p>
-                                        </div><!-- END .user-details -->
-                                        <ul class="comment-actions">
-                                            <li><a href="#" class="approved"><i class="ion-checkmark"></i>Approved</a></li>
-                                            <li><a href="#"><i class="ion-android-alert"></i>Spam</a></li>
-                                            <li><a href="#"><i class="ion-compose"></i>Edit</a></li>
-                                            <li><a href="#"><i class="ion-reply"></i>Reply</a></li>
-                                            <li><a href="#"><i class="ion-ios-trash"></i>Delete</a></li>
-                                        </ul><!-- END .comment-actions -->
-                                    </div><!-- END .comments-item  -->
-
-                                    <!-- Comment 2 -->
-                                    <div class="comments-item comment-pending">
-                                        <input class="form-check-input" type="checkbox">
-                                        <h5>Barbeque Techniques: Two Methods To Consider</h5>
-                                        <a href="#" class="comment-issue no-issue">No issues detected</a>
-                                        <div class="comment-details">
-                                            <div class="user-avatar">W.Z</div>
-                                            <a href="#" class="user-name">Kenneth Barber</a>
-                                            <p class="user-comment">Legend tells that that the Emerald Buddha was created in Pataliputra, India, which is now the city of Patna in 43 BCE by Nagasena… more</p>
-                                        </div><!-- END .user-details -->
-                                        <ul class="comment-actions">
-                                            <li><a href="#"><i class="ion-checkmark"></i>Approve</a></li>
-                                            <li><a href="#"><i class="ion-android-alert"></i>Spam</a></li>
-                                            <li><a href="#"><i class="ion-compose"></i>Edit</a></li>
-                                            <li><a href="#"><i class="ion-reply"></i>Reply</a></li>
-                                            <li><a href="#"><i class="ion-ios-trash"></i>Delete</a></li>
-                                        </ul><!-- END .comment-actions -->
-                                    </div><!-- END .comments-item  -->
-
-                                </div><!-- END .comments-list  -->
-
-                            </div><!-- END #comments_all -->
-
-                            <div class="tab-pane fade" id="comments_approved" role="tabpanel" aria-labelledby="comments_approved-tab">
-                                Approved Comments
-                            </div><!-- END #comments_approved -->
-
-                            <div class="tab-pane fade" id="comments_pending" role="tabpanel" aria-labelledby="comments_pending-tab">
-                                Pending Comments
-                            </div><!-- END #comments_pending -->
-
-                            <div class="tab-pane fade" id="comments_spam" role="tabpanel" aria-labelledby="comments_spam-tab">
-                                Spam Comments
-                            </div><!-- END #comments_spam -->
-
-                            <div class="tab-pane fade" id="comments_deleted" role="tabpanel" aria-labelledby="comments_deleted-tab">
-                                Deleted Comments
-                            </div><!-- END #comments_deleted -->
-
-                        </div><!-- END #comments_content -->
-                    </div><!-- END .modal-body -->
-                 </div><!-- END .modal-content -->
-            </div><!-- END .modal-dialog -->
-          </div><!-- END .modal -->
         </div><!--END #editor-content -->
 
         <div id="sidebar">
@@ -445,6 +256,275 @@
     </div><!-- END #sidebar -->
     </div><!--END #main-content -->
 
+
+        <!-- Comments Modal -->
+        <div class="modal fade" id="article-comments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                 <div class="modal-header">
+                    <div class="modal-title">
+                        <h4  id="exampleModalLabel">Comments</h4>
+                        <h5>Manage user comments on { Article Title }</h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <img src="img/close-icon.svg" alt="close" height="12">
+                    </button>
+                </div><!-- END .modal-header -->
+                <div class="modal-body">
+                    <!-- <ul class="nav" id="comments-tabs">
+                      <li class="nav-item" id="comments-tab_all">
+                        <a class="nav-link active" href="#">All</a>
+                      </li>
+                      <li class="nav-item"  id="comments-tab_approved">
+                        <a class="nav-link" href="#">Approved</a>
+                      </li>
+                      <li class="nav-item" id="comments_pending">
+                        <a class="nav-link" href="#">Pending</a>
+                      </li>
+                      <li class="nav-item" id="comments_spam">
+                        <a class="nav-link disabled" href="#">Spam</a>
+                      </li>
+                      <li class="nav-item" id="comments_deleted">
+                        <a class="nav-link disabled" href="#">Deleted</a>
+                      </li>
+                    </ul> -->
+
+                    <ul class="nav" id="comments_tabs" role="tablist">
+
+                        <li class="nav-item">
+                             <a class="nav-link active" id="comments_all-tab" data-toggle="tab" href="#comments_all" role="tab" aria-controls="comments_all" aria-expanded="true">All</a>
+                        </li>
+
+                        <li class="nav-item">
+                             <a class="nav-link" id="comments_approved-tab" data-toggle="tab" href="#comments_approved" role="tab" aria-controls="comments_approved">Approved</a>
+                        </li>
+
+                        <li class="nav-item">
+                             <a class="nav-link" id="comments_pending-tab" data-toggle="tab" href="#comments_pending" role="tab" aria-controls="comments_pending">Pending</a>
+                        </li>
+
+                        <li class="nav-item">
+                             <a class="nav-link" id="comments_spam-tab" data-toggle="tab" href="#comments_spam" role="tab" aria-controls="comments_spam">Spam</a>
+                        </li>
+
+                        <li class="nav-item">
+                             <a class="nav-link" id="comments_deleted-tab" data-toggle="tab" href="#comments_deleted" role="tab" aria-controls="comments_deleted">Deleted</a>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="tab-content" id="comments_content">
+
+                        <div class="tab-pane fade show active" id="comments_all" role="tabpanel" aria-labelledby="comments_all-tab">
+
+                            <div class="comments-filter">
+                                <form class="form-inline">
+                                    <div class="flex-element">
+                                        <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                                            <input class="form-check-input" type="checkbox">
+                                        </div>
+
+                                        <label class="sr-only" for="inlineFormInputName2">Actions</label>
+
+                                        <div class="dropdown">
+                                            <button class="dropdown-btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Actions
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action 1</a>
+                                                <a class="dropdown-item" href="#">Action 2</a>
+                                                <a class="dropdown-item" href="#">Action 3</a>
+                                            </div><!-- END .dropdown-menu -->
+                                        </div><!-- END .dropdown -->
+
+                                        <div class="form-group" >
+                                            <label class="sr-only" for="comments-search">Search</label>
+                                            <input type="text" class="form-control search" id="comments-search" placeholder="Search">
+                                        </div>
+                                        <!-- <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="Jane Doe"> -->
+                                    </div>
+                                    <div class="flex-element" >
+                                        <div class="form-group">
+                                            <label>Filter By</label>
+                                            <div class="dropdown">
+                                                <button class="dropdown-btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Position
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Option 1</a>
+                                                    <a class="dropdown-item" href="#">Option 2</a>
+                                                    <a class="dropdown-item" href="#">Option 3</a>
+                                                </div><!-- END .dropdown-menu -->
+                                            </div><!-- END .dropdown -->
+                                        </div><!-- END .form-group -->
+
+                                        <div class="form-group">
+                                            <label>Sort By</label>
+                                            <div class="dropdown">
+                                                <button class="dropdown-btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Newest
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Option 1</a>
+                                                    <a class="dropdown-item" href="#">Option 2</a>
+                                                    <a class="dropdown-item" href="#">Option 3</a>
+                                                </div><!-- END .dropdown-menu -->
+                                            </div><!-- END .dropdown -->
+                                        </div><!-- END .form-group -->
+
+                                        <button type="submit" class="btn btn-primary sr-only">Submit</button>
+
+                                    </div><!-- END .flex-element -->
+                                </form>
+                                <hr>
+                            </div><!-- END .comments-filter  -->
+
+                            <div class="comments-list">
+                                <!-- Comment 1 -->
+                                <div class="comments-item comment-approved">
+                                    <input class="form-check-input" type="checkbox">
+                                    <h5>Barbeque Techniques: Two Methods To Consider</h5>
+                                    <a href="#" class="comment-issue has-issue">Contains link(s)</a>
+                                    <div class="comment-details">
+                                        <div class="user-avatar">W.Z</div>
+                                        <a href="#" class="user-name">Kenneth Barber</a>
+                                        <p class="user-comment">Legend tells that that the Emerald Buddha was created in Pataliputra, India, which is now the city of Patna in 43 BCE by Nagasena… more</p>
+                                    </div><!-- END .user-details -->
+                                    <ul class="comment-actions">
+                                        <li><a href="#" class="approved"><i class="ion-checkmark"></i>Approved</a></li>
+                                        <li><a href="#"><i class="ion-android-alert"></i>Spam</a></li>
+                                        <li><a href="#"><i class="ion-compose"></i>Edit</a></li>
+                                        <li><a href="#"><i class="ion-reply"></i>Reply</a></li>
+                                        <li><a href="#"><i class="ion-ios-trash"></i>Delete</a></li>
+                                    </ul><!-- END .comment-actions -->
+                                </div><!-- END .comments-item  -->
+
+                                <!-- Comment 2 -->
+                                <div class="comments-item comment-pending">
+                                    <input class="form-check-input" type="checkbox">
+                                    <h5>Barbeque Techniques: Two Methods To Consider</h5>
+                                    <a href="#" class="comment-issue no-issue">No issues detected</a>
+                                    <div class="comment-details">
+                                        <div class="user-avatar">W.Z</div>
+                                        <a href="#" class="user-name">Kenneth Barber</a>
+                                        <p class="user-comment">Legend tells that that the Emerald Buddha was created in Pataliputra, India, which is now the city of Patna in 43 BCE by Nagasena… more</p>
+                                    </div><!-- END .user-details -->
+                                    <ul class="comment-actions">
+                                        <li><a href="#"><i class="ion-checkmark"></i>Approve</a></li>
+                                        <li><a href="#"><i class="ion-android-alert"></i>Spam</a></li>
+                                        <li><a href="#"><i class="ion-compose"></i>Edit</a></li>
+                                        <li><a href="#"><i class="ion-reply"></i>Reply</a></li>
+                                        <li><a href="#"><i class="ion-ios-trash"></i>Delete</a></li>
+                                    </ul><!-- END .comment-actions -->
+                                </div><!-- END .comments-item  -->
+
+                            </div><!-- END .comments-list  -->
+
+                        </div><!-- END #comments_all -->
+
+                        <div class="tab-pane fade" id="comments_approved" role="tabpanel" aria-labelledby="comments_approved-tab">
+                            Approved Comments
+                        </div><!-- END #comments_approved -->
+
+                        <div class="tab-pane fade" id="comments_pending" role="tabpanel" aria-labelledby="comments_pending-tab">
+                            Pending Comments
+                        </div><!-- END #comments_pending -->
+
+                        <div class="tab-pane fade" id="comments_spam" role="tabpanel" aria-labelledby="comments_spam-tab">
+                            Spam Comments
+                        </div><!-- END #comments_spam -->
+
+                        <div class="tab-pane fade" id="comments_deleted" role="tabpanel" aria-labelledby="comments_deleted-tab">
+                            Deleted Comments
+                        </div><!-- END #comments_deleted -->
+
+                    </div><!-- END #comments_content -->
+                </div><!-- END .modal-body -->
+             </div><!-- END .modal-content -->
+        </div><!-- END .modal-dialog -->
+      </div><!-- END .modal -->
+
+
+      <!-- New Article Modal -->
+      <div class="modal fade" id="new-article-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  <div class="modal-title">
+                      <h4  id="exampleModalLabel">New Article</h4>
+                      <h5>Create a new article from a blank page or based on a template</h5>
+                  </div>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <img src="img/close-icon.svg" alt="close" height="12">
+                      </button>
+                  </div><!-- END .modal-header -->
+                  <div class="modal-body">
+                      <div class="row">
+
+                          <div class="col-md-4">
+                              <a href="#" class="box">
+                                  <div class="box-icon">
+                                      <img src="img/box-new.svg" alt="Blank" height="45">
+                                      <span>Blank</span>
+                                  </div><!-- END .box-icon -->
+                              </a><!-- END .box -->
+                          </div><!-- END .col-md-4 -->
+
+                          <div class="col-md-4">
+                              <a href="#" class="box">
+                                  <div class="box-icon">
+                                      <img src="img/box-faq.svg" alt="Blank" height="45">
+                                      <span>FAQ</span>
+                                  </div><!-- END .box-icon -->
+                              </a><!-- END .box -->
+                          </div><!-- END .col-md-4 -->
+
+                          <div class="col-md-4">
+                              <a href="#" class="box">
+                                  <div class="box-icon">
+                                      <img src="img/box-announcement.svg" alt="Blank" height="45">
+                                      <span>Announcement</span>
+                                  </div><!-- END .box-icon -->
+                              </a><!-- END .box -->
+                          </div><!-- END .col-md-4 -->
+
+                          <div class="col-md-4">
+                              <a href="#" class="box">
+                                  <div class="box-icon">
+                                      <img src="img/box-howto.svg" alt="Blank" height="45">
+                                      <span>How-To Guide</span>
+                                  </div><!-- END .box-icon -->
+                              </a><!-- END .box -->
+                          </div><!-- END .col-md-4 -->
+
+                          <div class="col-md-4">
+                              <a href="#" class="box">
+                                  <div class="box-icon">
+                                      <img src="img/box-downloads.svg" alt="Blank" height="45">
+                                      <span>Downloads Center</span>
+                                  </div><!-- END .box-icon -->
+                              </a><!-- END .box -->
+                          </div><!-- END .col-md-4 -->
+
+                          <div class="col-md-4">
+                              <a href="#" class="box">
+                                  <div class="box-icon">
+                                      <img src="img/box-custom.svg" alt="Blank" height="45">
+                                      <span>Custom Templates</span>
+                                  </div><!-- END .box-icon -->
+                              </a><!-- END .box -->
+                          </div><!-- END .col-md-4 -->
+
+                      </div>
+                  </div><!-- END .modal-body -->
+                  <div class="modal-footer">
+                      <a href="#" class="cancel-link" data-dismiss="modal" aria-label="Close">Cancel</a>
+                      <button type="button" class="btn-lg btn-blue-full"><span>Create<span> <i class="ionicons ion-ios-arrow-thin-right"></i></button>
+                  </div><!-- END .modal-footer -->
+              </div><!-- END .modal-content -->
+          </div><!-- END .modal-dialog -->
+      </div><!-- END .modal -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

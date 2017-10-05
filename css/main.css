@@ -765,20 +765,32 @@ h4 {
   .btn-green:focus, .btn-grey:focus, .btn-circular-grey:focus {
     outline: 0; }
 
-.btn-green-full, .btn-grey-full, .btn-square-blue-full {
+.btn-green-full, .btn-blue-full, .btn-grey-full, .btn-square-blue-full {
   background: #00c143;
   letter-spacing: -0.1px;
   color: white;
   border: 0; }
-  .btn-green-full:hover, .btn-grey-full:hover, .btn-square-blue-full:hover {
+  .btn-green-full:hover, .btn-blue-full:hover, .btn-grey-full:hover, .btn-square-blue-full:hover {
     background: #00b23e;
     color: white;
     transition: all 0.2s linear; }
-  .btn-green-full:active, .btn-grey-full:active, .btn-square-blue-full:active {
+  .btn-green-full:active, .btn-blue-full:active, .btn-grey-full:active, .btn-square-blue-full:active {
     background: #00a83a;
     color: white; }
-  .btn-green-full:focus, .btn-grey-full:focus, .btn-square-blue-full:focus {
+  .btn-green-full:focus, .btn-blue-full:focus, .btn-grey-full:focus, .btn-square-blue-full:focus {
     outline: 0; }
+
+.btn-blue-full {
+  padding: 0 25px;
+  background: #0062d0; }
+  .btn-blue-full:hover, .btn-blue-full:active {
+    background: #005bc1;
+    color: white; }
+  .btn-blue-full i.ionicons {
+    font-size: 1.5rem;
+    margin-right: 0;
+    margin-left: 7px;
+    vertical-align: -2px; }
 
 .btn-grey, .btn-circular-grey {
   border-color: #a9afb8;
@@ -1363,5 +1375,38 @@ body {
       background-color: rgba(180, 204, 227, 0.15);
       border: 1px solid rgba(180, 204, 227, 0.15);
       border-left: 3px solid #728190; }
+
+#new-article-modal .modal-dialog {
+  max-width: 60%; }
+#new-article-modal .box {
+  position: relative;
+  height: 140px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 40px;
+  color: #9DAFBE; }
+  #new-article-modal .box:hover {
+    color: #627d93;
+    border: 1px solid #0062d0;
+    padding-top: 39px; }
+  #new-article-modal .box .box-icon img {
+    display: block;
+    margin-bottom: 7px;
+    margin-left: auto;
+    margin-right: auto; }
+#new-article-modal .modal-footer {
+  justify-content: space-between; }
+  #new-article-modal .modal-footer button.btn-blue-full {
+    margin-right: 12px; }
+  #new-article-modal .modal-footer .cancel-link {
+    margin-left: 12px;
+    text-decoration: none;
+    color: #a9afb8; }
 
 /*# sourceMappingURL=main.css.map */

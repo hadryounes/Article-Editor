@@ -202,7 +202,8 @@
             color: #4f637d; }
           #editor-content .editor-body .article-top .article-translations .dropdown-menu .dropdown-item i {
             float: right;
-            font-size: .813rem; }
+            font-size: .813rem;
+            line-height: 23px; }
           #editor-content .editor-body .article-top .article-translations .dropdown-menu .new-language {
             text-align: center;
             clear: both;
@@ -575,7 +576,7 @@ a.a-highlight {
     color: white; }
   a.a-highlight:before {
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-    content: "1";
+    content: "2";
     color: white;
     text-align: center;
     font-size: .7rem;

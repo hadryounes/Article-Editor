@@ -73,6 +73,7 @@
                         i {
                             float: right;
                             color: #D0D8E0;
+
                         }
                     }
                     .current {
@@ -83,6 +84,7 @@
                         i {
                             float: right;
                             font-size: .813rem;
+                            line-height: 23px; 
                         }
                     }
                     .new-language {
@@ -152,7 +154,7 @@
             .annotation {
                 margin-left: 38px;
                 margin-top: 33px;
-                
+
                 .dropdown-toggle::after {
                     display: none;
                 }

@@ -294,7 +294,7 @@ a.a-highlight {
 
     &:before {
         font-family: $Open-Sans;
-        content: "1";
+        content: "2"; // Set to dynamically reflect the number of annotations, min:1 max:99
         color: white;
         text-align: center;
         font-size: .7rem;

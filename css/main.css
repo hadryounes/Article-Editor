@@ -404,6 +404,54 @@
       #editor-content .revisions-actions .ctas button {
         padding-bottom: 1px;
         margin-left: 10px; }
+  #editor-content .revisions-article {
+    position: relative;
+    width: 100%;
+    margin-top: 25px; }
+    #editor-content .revisions-article h1 {
+      font-size: 2rem;
+      color: #4d4a42;
+      font-weight: 600; }
+    #editor-content .revisions-article h2 {
+      font-size: 1rem;
+      color: #858585;
+      font-weight: 600;
+      margin-top: 18px; }
+    #editor-content .revisions-article .revisions-separator {
+      width: 150px;
+      height: 4px;
+      border: 1px solid #f2eee3;
+      background: #f2eee3;
+      margin-top: 25px; }
+    #editor-content .revisions-article .article-writer {
+      font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: .875rem;
+      font-weight: 400;
+      color: #c5aa59;
+      margin-top: 10px;
+      margin-bottom: 30px; }
+    #editor-content .revisions-article .revision-article-content {
+      font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
+      #editor-content .revisions-article .revision-article-content h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #858585;
+        text-transform: none; }
+      #editor-content .revisions-article .revision-article-content p {
+        color: #858585;
+        font-size: .9rem;
+        line-height: 27px;
+        margin-top: 15px;
+        margin-bottom: 25px; }
+      #editor-content .revisions-article .revision-article-content .addition {
+        font-weight: 400;
+        color: #76b04b;
+        background: #DBEECC; }
+      #editor-content .revisions-article .revision-article-content .deletion {
+        font-weight: 400;
+        color: #e17f7f;
+        background: #EFBBBB;
+        text-decoration: line-through; }
 
 #revisions-sidebar {
   position: fixed;
@@ -639,7 +687,7 @@ a.a-highlight {
 .align-center {
   text-align: center; }
 
-.content-text {
+.content-text, #editor-content .revisions-article .revision-article-content p {
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;

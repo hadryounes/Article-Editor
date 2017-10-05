@@ -130,8 +130,58 @@
   left: 0;
   width: 60px;
   margin: 0;
+  padding: 0;
   text-align: center;
   background-color: #29384b; }
+  .navbar .logo {
+    position: absolute;
+    top: 0;
+    height: 60px;
+    width: 60px;
+    padding: 16px 18px; }
+  .navbar .menu, .navbar .bottom-menu {
+    position: absolute;
+    padding: 0;
+    list-style: none;
+    top: 60px; }
+    .navbar .menu .menu-item, .navbar .bottom-menu .menu-item, .navbar .bottom-menu .bottom-menu-item {
+      height: 55px;
+      width: 60px;
+      padding: 6px; }
+      .navbar .menu .menu-item a, .navbar .bottom-menu .menu-item a, .navbar .bottom-menu .bottom-menu-item a {
+        text-decoration: none; }
+      .navbar .menu .menu-item i, .navbar .bottom-menu .menu-item i, .navbar .bottom-menu .bottom-menu-item i {
+        font-size: 1.5rem;
+        vertical-align: 10px;
+        color: #92A1B2;
+        opacity: .8; }
+        .navbar .menu .menu-item i:hover, .navbar .bottom-menu .menu-item i:hover, .navbar .bottom-menu .bottom-menu-item i:hover {
+          opacity: 1; }
+  .navbar .new-article {
+    position: absolute;
+    padding: 0;
+    list-style: none;
+    margin-top: 40px;
+    padding: 12px; }
+  .navbar .bottom-menu {
+    bottom: 45px;
+    top: auto; }
+  .navbar .user-profile-link {
+    position: absolute;
+    bottom: 10px;
+    padding: 0 12px; }
+    .navbar .user-profile-link .user-avatar {
+      background: #36B9A9;
+      height: 34px;
+      width: 34px;
+      color: white;
+      text-decoration: none;
+      font-family: "Interface", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 500;
+      font-size: .875rem;
+      display: block;
+      border-radius: 4px;
+      padding-top: 7px; }
 
 #sidebar {
   position: fixed;

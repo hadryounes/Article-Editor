@@ -39,52 +39,7 @@
         }
     }
 
-    .article-versions {
-        margin-top: 9px;
-        h4 {
-            color: $green;
-            text-transform: none;
-            float: left;
-            width: auto;
-        }
 
-        .preview-article > i {
-            float: right;
-            display: block;
-            color: $green;
-        }
-
-        .new-version {
-            text-align: center;
-            clear: both;
-            color: $green;
-            font-weight: 500;
-        }
-
-        .draft {
-            font-size: 0.6875rem;
-            border: 1px solid $grey-7;
-            border-radius: 10px;
-            padding: 1px 8px;
-            color: $grey-6;
-            float: right;
-            margin-left: 8px;
-        }
-
-        .published {
-            @extend .draft ;
-            color: $dark-blue-4;
-            border-color: $dark-blue-4;
-        }
-
-        .version-date {
-            font-family: $Open-Sans;
-            font-size: 0.75rem;
-            color: $grey-7;
-            font-style: italic;
-            margin-left: 2px;
-        }
-    }
 
     .article-keywords {
         .keywords {
@@ -156,4 +111,51 @@
         }
     }
 
+}
+
+.article-versions {
+    margin-top: 9px;
+    h4 {
+        color: $green;
+        text-transform: none;
+        float: left;
+        width: auto;
+    }
+
+    .preview-article > i {
+        float: right;
+        display: block;
+        color: $green;
+    }
+
+    .new-version {
+        text-align: center;
+        clear: both;
+        color: $green;
+        font-weight: 500;
+    }
+
+    .draft {
+        font-size: 0.6875rem;
+        border: 1px solid $grey-7;
+        border-radius: 10px;
+        padding: 1px 8px;
+        color: $grey-6;
+        float: right;
+        margin-left: 8px;
+    }
+
+    .published {
+        @extend .draft ;
+        color: $dark-blue-4;
+        border-color: $dark-blue-4;
+    }
+
+    .version-date {
+        font-family: $Open-Sans;
+        font-size: 0.75rem;
+        color: $grey-7;
+        font-style: italic;
+        margin-left: 2px;
+    }
 }

@@ -21,6 +21,7 @@
             color: $dark-blue-1;
             width: auto;
             float: left;
+            margin-bottom: 20px;
         }
         .close {
             float: right;
@@ -28,10 +29,25 @@
         }
     }
 
+    .article-versions {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+
+        .dropdown-btn {
+            max-width: 100%;
+        }
+
+        .dropdown-menu {
+            max-width: 100%;
+            //margin-left: 2px;
+        }
+    }
+
     .sidebar-timeline {
         position: relative;
         width: 100%;
-        margin-top: 45px;
+        margin-top: 20px;
         height: 85vh; // Temporary fix
         &::before {
             content: '';

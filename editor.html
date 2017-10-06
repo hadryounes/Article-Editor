@@ -12,9 +12,23 @@
   <body>
 
       <nav class="navbar">
-          <div class="logo">
-              <a href="#"><img src="img/helpjuice_logo.svg" alt="logo" height="24"></a>
+
+            <div class="logo dropdown">
+                <a href="#" class="dropdown-toggle" role="button" id="logo-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/helpjuice_logo.svg" alt="logo" height="24">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <ul>
+                        <li><a href="#" class="expandable"><i class="ion-android-open"></i><span>Preview KB</span></a></li>
+                        <li><a href="#" class="expandable"><i class="ion-checkmark-circled"></i>System Status</a></li>
+                        <li><a href="#" class="expandable"><i class="ion-card"></i>Billing</a></li>
+                        <li><a href="#" class="expandable"><i class="ion-android-settings"></i>Settings</a></li>
+                        <li><a href="#"><i class="ion-log-out"></i>Logout</a></li>
+                    </ul>
+              </div><!-- END .dropdown-menu -->
           </div><!-- END .logo -->
+
+
           <ul class="menu">
               <li class="menu-item"><a href="#"><i class="ion-ios-home" data-toggle="tooltip" data-placement="right" title="Dashboard"></i></a></li>
               <li class="menu-item"><a href="#"><i class="ion-stats-bars" data-toggle="tooltip" data-placement="right" title="Analytics"></i></a></li>
@@ -137,7 +151,7 @@
                                     </div><!--  .comment-case  -->
                                </div><!-- END .annotation-comment -->
                          </div><!-- END .dropdown-menu -->
-                     </div><!-- END .annoration-->
+                     </div><!-- END .annotation-->
                 </div><!-- END .article-content -->
             </div><!--END #editor-body -->
 

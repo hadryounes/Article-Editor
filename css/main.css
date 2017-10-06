@@ -139,6 +139,66 @@
     height: 60px;
     width: 60px;
     padding: 16px 18px; }
+    .navbar .logo .dropdown-toggle:after {
+      display: none; }
+    .navbar .logo .dropdown-menu {
+      width: 243px;
+      margin-top: -50px;
+      margin-left: 65px;
+      background-color: #223141;
+      border-top: 1px solid #d9dee3;
+      border-radius: 0;
+      padding: 0px;
+      color: rgba(255, 255, 255, 0.6);
+      border-radius: 2px;
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.32); }
+      .navbar .logo .dropdown-menu:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 90%;
+        left: -9px;
+        border-width: 0 6px 6px 6px;
+        border-style: solid;
+        border-color: #223141 transparent;
+        transform: rotate(-90deg); }
+      .navbar .logo .dropdown-menu ul {
+        padding: 0;
+        list-style: none;
+        margin-bottom: 5px;
+        margin-top: 5px; }
+        .navbar .logo .dropdown-menu ul li {
+          width: 100%; }
+          .navbar .logo .dropdown-menu ul li a {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-family: "Interface", "Helvetica Neue", Arial, sans-serif;
+            font-size: .875rem;
+            color: rgba(255, 255, 255, 0.6); }
+            .navbar .logo .dropdown-menu ul li a:hover {
+              background: rgba(255, 255, 255, 0.05);
+              color: rgba(255, 255, 255, 0.9);
+              border-left: 2px solid #0062d0;
+              padding-left: 13px; }
+            .navbar .logo .dropdown-menu ul li a i {
+              margin-right: 8px; }
+        .navbar .logo .dropdown-menu ul .expandable::after {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          float: right;
+          margin-right: -7px;
+          margin-left: 0;
+          margin-top: 5px;
+          content: "";
+          color: #7a8995;
+          border-top: .35em solid transparent;
+          border-bottom: .35em solid transparent;
+          border-right: .35em solid transparent;
+          border-left: .35em solid; }
   .navbar .menu, .navbar .bottom-menu {
     position: absolute;
     padding: 0;

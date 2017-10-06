@@ -725,6 +725,8 @@ h4 {
   font-weight: 400;
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.1px; }
+  .btn-lg:hover, .btn-md:hover, .btn-circular:hover, .btn-square:hover, .btn-sm:hover, .btn-lg:focus, .btn-md:focus, .btn-circular:focus, .btn-square:focus, .btn-sm:focus {
+    cursor: pointer; }
   .btn-lg i.ionicons, .btn-md i.ionicons, .btn-circular i.ionicons, .btn-square i.ionicons, .btn-sm i.ionicons {
     font-size: 1.375rem;
     margin-right: 7px;

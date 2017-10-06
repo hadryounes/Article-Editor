@@ -1,3 +1,5 @@
 //To-Do list
 
-- Navbar
+- Navbar -> Logo Dropdown
+
+- Revisions -> Versions dropdown

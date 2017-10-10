@@ -11,6 +11,7 @@
 	direction: ltr;
 	height: 28px;
     vertical-align: middle;
+
 	input {
 		display: none;
 	}
@@ -22,7 +23,6 @@
 	width: 73px;
 	height: 28px;
 	border-radius: 30px;
-	//background: #ddd;
 	background: $grey-5;
 	overflow: hidden;
 	cursor: pointer;
@@ -61,15 +61,16 @@
 	overflow: hidden;
 	text-align: center;
 	opacity: 0;
-
 	-webkit-transition: all .2s ease-in-out .1s;
 	-ms-transition: 	all .2s ease-in-out .1s;
 	transition: 		all .2s ease-in-out .1s;
 }
+
 .lcs_label.lcs_label_on {
 	left: -70px;
 	z-index: 6;
 }
+
 .lcs_label.lcs_label_off {
 	right: -70px;
 	z-index: 5;
@@ -81,9 +82,11 @@
 	background: $green;
 	box-shadow: 0 0 2px $green inset;
 }
+
 .lcs_switch.lcs_on .lcs_cursor {
 	left: 48px;
 }
+
 .lcs_switch.lcs_on .lcs_label_on {
 	left: 10px;
 	opacity: 1;

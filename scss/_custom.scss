@@ -1,0 +1,756 @@
+//-------------------------
+// Custom ----------
+//-------------------------
+
+// Titles
+
+h1 {
+    font-family: $Open-Sans;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+h2 {
+    font-family: $Open-Sans;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+h4 {
+    font-family: $Interface;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+// Buttons
+
+.btn-lg {
+    border-radius: 50px;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-family: $Open-Sans;
+    letter-spacing: -0.1px;
+
+    &:hover, &:focus {
+        cursor: pointer;
+    }
+
+    i.ionicons {
+        font-size: 1.375rem;
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+
+    i.fa {
+        font-size: 0.875rem;
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+
+    span {
+        vertical-align: middle
+    }
+}
+
+.btn-md {
+    @extend .btn-lg;
+    height: 36px;
+}
+
+.btn-circular {
+    @extend .btn-md;
+    height: 36px;
+    width: 36px;
+    border-radius: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-square {
+    @extend .btn-circular;
+    height: 36px;
+    width: 36px;
+    border-radius: 3px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-sm {
+    @extend .btn-lg;
+    height: 21px;
+    border-radius: 2px;
+    font-size: .813rem;
+    padding: 0 7px;
+}
+
+.btn-green {
+    background: white;
+    border: 1px solid $green;
+    color: $green;
+    outline: 0;
+    box-shadow: none;
+
+    &:hover {
+        background: $green;
+        color: white;
+        transition: all 0.2s linear;
+    }
+
+    &:active {
+        background: darken( $green, 5% );
+        color: white;
+    }
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+
+
+.btn-green-full {
+    background: $green;
+    letter-spacing: -0.1px;
+    color: white;
+    border: 0;
+
+    &:hover {
+        background: darken( $green, 3% );
+        color: white;
+        transition: all 0.2s linear;
+    }
+
+    &:active {
+        background: darken( $green, 5% );
+        color: white;
+    }
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+.btn-blue-full {
+    @extend .btn-green-full;
+    padding: 0 25px;
+    background: $bright-blue;
+
+    &:hover, &:active {
+        background: darken( $bright-blue, 3% );
+        color: white;
+    }
+
+    i.ionicons {
+        font-size: 1.5rem;
+        margin-right: 0;
+        margin-left: 7px;
+        vertical-align: -2px;
+    }
+}
+
+.btn-grey {
+    @extend .btn-green;
+    border-color: $grey-6;
+    color: $grey-6;
+
+    &:hover {
+        background: darken( $grey-6, 3% );
+        color: white;
+        transition: all 0.2s linear;
+    }
+
+    &:active {
+        background: darken( $grey-6, 5% );
+        color: white;
+    }
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+.btn-grey-full {
+    @extend .btn-green-full;
+    background: $grey-6;
+
+    &:hover {
+        background: darken( $grey-6, 3% );
+        color: white;
+        transition: all 0.2s linear;
+    }
+
+    &:active {
+        background: darken( $grey-6, 5% );
+        color: white;
+    }
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+.btn-square-blue-full {
+    @extend .btn-green-full;
+    border: 0;
+    background: $bright-blue;
+    color: white;
+
+    &:hover {
+        background: $blue;
+        color: white;
+        cursor: pointer;
+    }
+
+    &:active, &:focus {
+        background: darken ( $blue, 5%);
+        cursor: pointer;
+    }
+
+    i.fa {
+        margin-right: 0;
+        vertical-align: 0px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    i.ionicons {
+        vertical-align: middle;
+        margin-right: 0;
+        font-size: 1rem;
+        vertical-align: 0px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.btn-circular-grey-full {
+    border: 0;
+    background: $grey-6;
+    color: white;
+
+    &:hover {
+        background: $grey-5;
+        color: white;
+    }
+
+    &:active {
+        background: darken($grey-5, 5%);
+    }
+
+    i.ionicons {
+        vertical-align: middle;
+        margin-right: 0;
+        font-size: 1.3rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.btn-circular-grey {
+    @extend  .btn-grey;
+    background: white;
+    border: 1px solid $grey-6;
+    color: $grey-6;
+    box-shadow: 0;
+
+    &:hover {
+        background: $grey-5;
+        color: white;
+    }
+
+    &:active {
+        background: darken($grey-5, 5%);
+    }
+
+    i.fa {
+        margin-right: 0;
+        vertical-align: 0px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    i.ionicons {
+        vertical-align: middle;
+        margin-right: 0;
+        font-size: 1.3rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+// Links
+
+a {
+    color: $dark-blue-4;
+    text-decoration: underline;
+    &:hover {
+        color: $bright-blue;
+        text-decoration: underline;
+    }
+    &:active {
+        color: $bright-blue;
+        text-decoration: none;
+    }
+}
+
+a.a-highlight {
+    color: #5D636B;
+    background-color: #C3DCFB;
+    padding: 2px 1px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $bright-blue;
+        color: white;
+    }
+
+    &:before {
+        font-family: $Open-Sans;
+        content: "2"; // Set to dynamically reflect the number of annotations, min:1 max:99
+        color: white;
+        text-align: center;
+        font-size: .7rem;
+        font-weight: 600;
+        line-height: 15px;
+        height: 18px;
+        width: 17px;
+        background: url(../img/annotation-tag.svg) no-repeat;
+        margin-top: -19px;
+        position: absolute;
+    }
+}
+
+.align-center {
+    text-align: center;
+}
+
+//Content
+.content-text {
+    font-family: $Open-Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #dark-blue-4;
+
+}
+
+.ui-text {
+    font-family: $Interface;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $dark-blue-4;
+}
+
+// Dropdowns
+
+.dropdown-btn {
+    width: 262px;
+	height: 36px;
+	border-radius: 2px;
+	background-color: white;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.05);
+	border: solid 1px #ccd2d6;
+    color: $grey-1;
+    text-align: left;
+    letter-spacing: -0.1px;
+    vertical-align:  middle;
+    padding: 0 13px;
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    &:active, &:focus {
+        border: 1px solid $grey-6;
+        outline:0;
+    }
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    float: right;
+    margin-left: .875em;
+    margin-top: 7px;
+    vertical-align: .255em;
+    content: "";
+    color: #aab3ba;
+    border-top: .35em solid;
+    border-right: .35em solid transparent;
+    border-left: .35em solid transparent;
+}
+
+.dropdown-menu {
+    width: 262px;
+    margin-top: 8px;
+    border-top: 3px solid $bright-blue;
+    border-radius: 0;
+    padding: 0 15px;
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 100%;
+        right: 10px;
+        border-width: 0 8px 8px 8px;
+        border-style: solid;
+        border-color: $bright-blue transparent;
+    }
+
+    .dropdown-item {
+        padding: 10px 0px;
+        border-bottom: 1px solid $grey-8;
+        @extend .ui-text;
+        text-decoration: none;
+        color: $grey-3;
+
+        i{
+            margin-right: 5px;
+        }
+
+        &:hover, &:focus {
+            background: transparent;
+            color: $dark-blue-4;
+        }
+    }
+
+    .tab-pane a i {
+        margin-right: 5px;
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid $grey-8;
+        padding-bottom: 1px;
+
+        .nav-item {
+            width: 50%;
+            text-align: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            padding: 10px;
+            font-family: $Open-Sans;
+            font-weight: 600;
+            font-size: 0.6875rem;
+            border-bottom: 0;
+            border:0;
+            color: $grey-3;
+
+            &:hover {
+                border: 0;
+                color: $dark-blue-4;
+            }
+
+            &.active {
+                color:  $dark-blue-4;
+                border: none;
+                border-bottom:  2px solid #A6B2CC;
+            }
+        }
+    }
+}
+
+// Options Dropdown
+.options-dropdown {
+
+    a {
+        float: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        i {
+            margin-right: 2px;
+            font-size: 1rem;
+            vertical-align: -1px;
+        }
+
+    }
+
+    .dropdown-menu {
+        width: 304px;
+        margin-top: 2px;
+        padding-bottom: 15px;
+
+        &:before {
+            right: 23px;
+        }
+
+        .dropdown-title {
+            padding: 20px 0;
+
+            h4 {
+                float: left;
+                color: $dark-blue-4;
+            }
+
+            a {
+                float: right;
+                color: $grey-2;
+
+                i {
+                    vertical-align: 4px;
+
+                    &:hover, &:focus {
+                        color: $bright-blue;
+                    }
+                }
+            }
+        }
+        .dropdown-item {
+            color: $dark-blue-4;
+            text-transform: none;
+
+            &:hover {
+                color: $dark-blue-3;
+            }
+
+            .item-note {
+                font-size: 0.75rem;
+                //color: #c2c9ce;
+                opacity: .75;
+                font-family: $Open-Sans;
+                font-weight: 400;
+                padding-left: 10px;
+            }
+        }
+
+        .expandable {
+
+            &::after {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                float: right;
+                margin-right: -5px;
+                margin-left: 0;
+                margin-top: 6px;
+                vertical-align: .255em;
+                content: "";
+                color: $grey-1;
+                border-top: .35em solid transparent;
+                border-bottom: .35em solid transparent;
+                border-right: .35em solid transparent;
+                border-left: .35em solid;
+            }
+        }
+
+        .red-item {
+            color: $red;
+
+            &:hover, &:active, &:focus {
+                color: $red;
+            }
+        }
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+}
+
+// Dropdown form
+
+.dropdown-form {
+    margin-bottom: 8px;
+
+    label {
+        font-family: $Interface;
+    	font-size: .813rem;
+    	font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    	letter-spacing: 0.2px;
+    	text-align: left;
+        float: left;
+        clear: left;
+        text-transform: uppercase;
+    	color: $grey-2;
+    }
+
+    input.form-control {
+        height: 36px;
+        border-radius: 2px;
+    	background-color: rgba(220, 225, 231, .15);
+    	border: solid 1px #dde4ea;
+        font-size: .813rem;
+        font-family: $Open-Sans;
+        color: $dark-blue-4;
+        font-weight: 600;
+    }
+}
+
+.dropdown-form-control {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+
+    button.btn-green {
+        float: right;
+        height: 33px;
+    }
+
+    a.discard-link {
+        display: inline-block;
+        float: left;
+        vertical-align: middle;
+        font-family: $Interface;
+    	font-size: .813rem;
+    	letter-spacing: -0.1px;
+    	text-align: left;
+    	color: $grey-2;
+        text-transform: none;
+        line-height: 2.4em;
+
+        i {
+            margin-right: 7px
+        }
+    }
+}
+
+// Breadcrumbs
+
+.breadcrumbs {
+    font-family: $Interface;
+    font-size: 14px;
+    display: inline-block;
+    float: left;
+    color: #4f637d;
+    letter-spacing: 0.2px;
+    padding: 0;
+    list-style: none;
+
+    .bc-item {
+        float: left;
+        display: inline;
+
+        a {
+            color: #4f637d;
+            text-decoration: underline;
+        }
+    }
+
+    .bc-item+.bc-item::before {
+        display: inline-block;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        color: #4f637d;
+        content: ">";
+    }
+
+}
+
+
+// Form Inputs
+label {
+    font-family: $Interface;
+	font-size: .813rem;
+	font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+	letter-spacing: 0.2px;
+	text-align: left;
+    float: left;
+    clear: left;
+    text-transform: uppercase;
+	color: $grey-2;
+}
+
+input.form-control {
+    height: 36px;
+    border-radius: 2px;
+	background-color: rgba(220, 225, 231, .15);
+	border: solid 1px #dde4ea;
+    font-size: .813rem;
+    font-family: $Open-Sans;
+    color: $dark-blue-4;
+    font-weight: 600;
+}
+
+input.add {
+    background: url(../img/plus-icon.svg),
+                           rgba(220, 225, 231, .15);
+    background-repeat: no-repeat,
+                                        repeat;
+    background-position: right 10px center;
+
+    &::placeholder {
+        font-family: $Open-Sans;
+        font-style: italic;
+        font-weight: 300;
+        color: #AAB3BA;
+    }
+}
+
+input.search {
+    @extend input.add;
+    background: url(../img/search-icon.svg),
+                           rgba(220, 225, 231, .15);
+    background-position: right 10px center;
+    background-repeat: no-repeat,
+                                        repeat;
+}
+
+
+// Modals
+
+.modal {
+
+    .modal-dialog {
+        max-width: 80%; //sets the width of a modal
+    }
+
+    .modal-content {
+        border-radius: 0;
+        border: 0;
+        box-shadow: 0 2px 6px 0 rgba (0, 0, 0, .3);
+
+        .modal-header {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            display: block;
+            border-bottom: 0;
+
+            .modal-title {
+
+                h4 {
+                    font-family: $Open-Sans;
+                	font-size: 1.5rem;
+                	font-weight: 600;
+                	letter-spacing: 0.4px;
+                	text-align: center;
+                	color: #374c61;
+                    text-transform: none;
+                }
+
+                h5 {
+                    font-family: $Open-Sans;
+                	font-size: .875rem;
+                	letter-spacing: 0.2px;
+                    font-weight: 400;
+                	text-align: center;
+                	color: #aeb7be;
+                }
+            }
+            
+            button.close {
+                position: absolute;
+                right: 18px;
+                top: 8px;
+            }
+        }
+
+        .modal-body {
+            padding-top: 0px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}

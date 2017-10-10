@@ -14,6 +14,7 @@
         .last-update {
             float: right;
             display: inline-block;
+
             a {
                 font-size: 0.8125rem;
                 color: #9da6b0;
@@ -21,6 +22,7 @@
                 font-weight: 400;
                 font-family: $Open-Sans;
                 text-decoration: none;
+
                 &:hover {
                     color: $dark-blue-4;
                 }
@@ -64,35 +66,43 @@
                 display: block;
                 float: right;
                 margin-right: 20px;
+
                 .dropdown-menu {
                     right: -1px;
                     font-family: $Open-Sans;
                     font-size: .875rem;
                     color: $dark-blue-4;
                     font-weight: 400;
+
                     &:before {
                         right: -1px;
                     }
+
                     .dropdown-title {
                         color: $dark-blue-4;
                         margin-top: 15px;
+
                         i {
                             float: right;
                             color: #D0D8E0;
 
                         }
                     }
+
                     .current {
                         font-weight: 500;
                         color: $dark-blue-4;
                     }
+
                     .dropdown-item {
+
                         i {
                             float: right;
                             font-size: .813rem;
                             line-height: 23px;
                         }
                     }
+
                     .new-language {
                         text-align: center;
                         clear: both;
@@ -100,6 +110,7 @@
                         font-weight: 500;
                     }
                 }
+
                 .dropdown-toggle::after {
                     display: none;
                 }
@@ -111,6 +122,7 @@
             width: calc( 100% - 40px );
             margin-left: 40px;
             border-bottom: 1px solid $grey-9;
+
             ul {
                 padding-left: 0;
                 list-style: none;
@@ -125,13 +137,16 @@
                         padding-top: 10px;
                         text-align: center;
                         display: inline-block;
+
                         i {
                             color: $grey-5;
                             font-size: .813rem;
+
                             &:hover {
                                 color: $dark-blue-4;
                             }
                         }
+
                         .fa-sort-down {
                             margin-left: 5px;
                         }
@@ -142,6 +157,7 @@
                 li.left {
                     float: left;
                 }
+
                 li.right {
                     float: right;
                 }
@@ -152,6 +168,7 @@
             position: relative;
             width: 100%;
             margin-top: 25px;
+
             p {
                 line-height: 2rem; // set 1.6rem when annotations are disabled
                 margin-left: 40px;
@@ -259,6 +276,7 @@
                             width: calc(100% - 45px);
                             display: inline-block;
                             margin-right: 0px;
+
                             &::placeholder {
                                 font-family: $Open-Sans;
                                 font-style: italic;
@@ -299,6 +317,7 @@
             font-size: .813rem;
             border-radius: 3px;
             margin-left: 10px;
+
             &:before {
                 content: "";
                 position: absolute;
@@ -337,28 +356,34 @@
         width: 100%;
         margin-top: 15px;
         padding-bottom: 15px;
-        //border-bottom: 1px solid $grey-9;
+
         .change-status {
             margin-top: 7px;
             font-size: .875rem;
+
             .blue {
                 font-weight: 600;
                 color: $dark-blue-4;
             }
+
             .green {
                 font-weight: 600;
                 color: #76b04b;
             }
+
             .red {
                 font-weight: 600;
                 color: #e17f7f;
             }
         }
+
         .ctas {
             float: right;
+
             button {
                 padding-bottom: 1px;
                 margin-left: 10px;
+
                 i.ionicons {
                     font-size: 1rem;
                     margin-top: 1px;
@@ -371,17 +396,20 @@
         position: relative;
         width: 100%;
         margin-top: 25px;
+
         h1 {
             font-size: 2rem;
             color: #4d4a42;
             font-weight: 600;
         }
+
         h2 {
             font-size: 1rem;
             color: #858585;
             font-weight: 600;
             margin-top: 18px;
         }
+
         .revisions-separator {
             width: 150px;
             height: 4px;
@@ -389,6 +417,7 @@
             background: #f2eee3;
             margin-top: 25px;
         }
+
         .article-writer {
             font-family: $Open-Sans;
             font-size: .875rem;
@@ -397,14 +426,17 @@
             margin-top: 10px;
             margin-bottom: 30px;
         }
+
         .revision-article-content {
             font-family: $Open-Sans;
+
             h4 {
                 font-size: 1rem;
                 font-weight: 600;
                 color: #858585;
                 text-transform: none;
             }
+
             p {
                 @extend .content-text;
                 color: #858585;
@@ -413,11 +445,13 @@
                 margin-top: 15px;
                 margin-bottom: 25px;
             }
+
             .addition {
                 font-weight: 400;
                 color: #538C27;
                 background: #DBEECC;
             }
+
             .deletion {
                 font-weight: 400;
                 color: #D55C5C;
@@ -426,8 +460,4 @@
             }
         }
     }
-
-
-
-
 }// END #editor-content

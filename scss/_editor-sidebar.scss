@@ -4,7 +4,6 @@
     right: 0px;
     width: 280px;
     height: 100%;
-    //opacity: 0;
     transition: all .2s;
     background: white;
     border-left: 1px solid $grey-9;
@@ -42,10 +41,12 @@
 
 
     .article-keywords {
+
         .keywords {
             position: relative;
             margin-top: 10px;
             min-height: 31px;
+
             .keyword {
                 background: $grey-6;
                 color: white;
@@ -58,6 +59,7 @@
                 width: auto;
                 float: left;
                 margin-right: 6px;
+
                 i {
                     float: right;
                     padding-left: 7px;
@@ -68,6 +70,7 @@
     }
 
     .article-access-level {
+
         ul {
             list-style: none;
             padding: 0;
@@ -76,10 +79,12 @@
             li {
                 font-size: .835rem;
                 margin-bottom: 6px;
+
                 .list-checked {
                     font-weight: 500;
                     color: $dark-blue-4
                 }
+
                 .list-unchecked {
                     font-weight: 300;
                     color: $grey-2
@@ -93,6 +98,7 @@
     }
 
     .related-articles {
+
         ul {
             list-style: none;
             padding: 0;
@@ -115,6 +121,7 @@
 
 .article-versions {
     margin-top: 9px;
+
     h4 {
         color: $green;
         text-transform: none;

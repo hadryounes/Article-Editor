@@ -4,35 +4,48 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Helpjuice Backend - Revisions</title>
+    <title>Helpjuice Backend - Article Versions</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#"><img src="img/helpjuice_logo.svg" alt="logo" height="24"></a>
-        </div><!-- END .logo -->
-        <ul class="menu">
-            <li class="menu-item"><a href="#"><i class="ion-ios-home" data-toggle="tooltip" data-placement="right" title="Dashboard"></i></a></li>
-            <li class="menu-item"><a href="#"><i class="ion-stats-bars" data-toggle="tooltip" data-placement="right" title="Analytics"></i></a></li>
-            <li class="menu-item"><a href="#"><i class="ion-person-stalker" data-toggle="tooltip" data-placement="right" title="Users"></i></a></li>
-            <li class="menu-item"><a href="#"><i class="ion-ios-settings-strong" data-toggle="tooltip" data-placement="right" title="Settings"></i></a></li>
-            <li class="menu-item"><a href="#"><i class="ion-upload" data-toggle="tooltip" data-placement="right" title="Uploads"></i></a></li>
-        </ul>
-        <div class="new-article">
-            <button type="button" class="btn-square btn-square-blue-full" data-toggle="modal" data-target="#new-article-modal"><i class="ionicons ion-plus"></i></button>
-        </div><!-- END .new-article -->
-        <ul class="bottom-menu">
-            <li class="bottom-menu-item"><a href="#"><i class="ion-help-circled" data-toggle="tooltip" data-placement="right" title="Help"></i></a></li>
-            <li class="bottom-menu-item"><a href="#"><i class="ion-ios-bell" data-toggle="tooltip" data-placement="right" title="Notifications"></i></a></li>
-        </ul>
-        <div class="user-profile-link">
-            <a href="#" class="user-avatar">EH</a>
-        </div><!-- END .user-profile-link  -->
-    </nav><!-- END .navbar  -->
+      <nav class="navbar">
+
+            <div class="logo dropdown">
+                <a href="#" class="dropdown-toggle" role="button" id="logo-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/helpjuice_logo.svg" alt="logo" height="24">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <ul>
+                        <li><a href="#" class="expandable"><i class="ion-android-open"></i><span>Preview KB</span></a></li>
+                        <li><a href="#" class="expandable"><i class="ion-checkmark-circled"></i>System Status</a></li>
+                        <li><a href="#" class="expandable"><i class="ion-card"></i>Billing</a></li>
+                        <li><a href="#" class="expandable"><i class="ion-android-person"></i>Account Settings</a></li>
+                        <li><a href="#"><i class="ion-log-out"></i>Logout</a></li>
+                    </ul>
+              </div><!-- END .dropdown-menu -->
+          </div><!-- END .logo -->
+
+          <ul class="menu">
+              <li class="menu-item"><a href="#"><i class="ion-ios-home" data-toggle="tooltip" data-placement="right" title="Dashboard"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-stats-bars" data-toggle="tooltip" data-placement="right" title="Analytics"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-person-stalker" data-toggle="tooltip" data-placement="right" title="Users"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-ios-settings-strong" data-toggle="tooltip" data-placement="right" title="Settings"></i></a></li>
+              <li class="menu-item"><a href="#"><i class="ion-upload" data-toggle="tooltip" data-placement="right" title="Uploads"></i></a></li>
+          </ul>
+          <div class="new-article">
+              <button type="button" class="btn-square btn-square-blue-full" data-toggle="modal" data-target="#new-article-modal"><i class="ionicons ion-plus"></i></button>
+          </div><!-- END .new-article -->
+          <ul class="bottom-menu">
+              <li class="bottom-menu-item"><a href="#"><i class="ion-help-circled" data-toggle="tooltip" data-placement="right" title="Help"></i></a></li>
+              <li class="bottom-menu-item"><a href="#"><i class="ion-ios-bell" data-toggle="tooltip" data-placement="right" title="Notifications"></i></a></li>
+          </ul>
+          <div class="user-profile-link">
+              <a href="#" class="user-avatar">EH</a>
+          </div><!-- END .user-profile-link  -->
+      </nav><!-- END .navbar  -->
 
 
     <div id="main-content" class="container-fluid no-padding">
@@ -43,7 +56,7 @@
                 <ol class="breadcrumbs">
                     <li class="bc-item"><a href="#">Content</a></li>
                     <li class="bc-item"><a href="editor.html">Editor</a></li>
-                    <li class="bc-item active"><a href="revisions.html">Revisions</a></li>
+                    <li class="bc-item active"><a href="revisions.html">Article Versions</a></li>
                 </ol><!--END .breadcrumbs-->
                 <div class="last-update">
                     <a href="revisions.html"><span>Last Update: 30/08/2017</span></a>
@@ -92,7 +105,7 @@
 
         <div id="revisions-sidebar">
             <div class="sidebar-title">
-                <h3>Revision History</h3>
+                <h3>Article Versions</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <img src="img/close-icon.svg" alt="close" height="12">
                 </button>

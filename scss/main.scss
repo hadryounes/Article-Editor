@@ -6,7 +6,7 @@
      "variables",
      "color-palette",
      "custom",
-     "plugins", // Including LC-Switch
+     "plugins",
      "navbar",
      "editor-sidebar",
      "editor-content",
@@ -60,7 +60,6 @@ body {
             font-weight: 500;
         }
     }
-
 }
 
 #comments_content {
@@ -169,8 +168,6 @@ body {
             .has-issue {
                 background: #f8c654;
             }
-
-
 
             .comment-details {
                 position: relative;
@@ -309,6 +306,7 @@ body {
         button.btn-blue-full {
             margin-right: 12px;
         }
+
         .cancel-link {
             margin-left: 12px;
             text-decoration: none;

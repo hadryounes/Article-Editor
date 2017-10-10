@@ -1322,6 +1322,8 @@ body {
     justify-content: space-between; }
   #comments_content .comments-filter .flex-element {
     display: inherit; }
+  #comments_content .comments-filter hr {
+    margin-bottom: .5rem; }
   #comments_content .comments-filter .dropdown .dropdown-btn {
     width: 112px; }
   #comments_content .comments-filter .dropdown .dropdown-menu {
